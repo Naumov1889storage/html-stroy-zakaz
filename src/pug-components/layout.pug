@@ -1,0 +1,83 @@
+doctype html
+html(lang="ru-Ru")
+    head
+        meta(charset = 'utf-8')
+        meta(name='viewport', content="initial-scale=1.0, width=device-width")
+        block title
+            -var title = "STROY-ZAKAZ"
+            -var page = ''
+        title #{title + (page.length ? " - " : "") + (typeof page === 'string' ? page : page[page.length - 1])}
+        link(rel='stylesheet', href='css/concat-css-libs.css')
+        link(rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css")
+        link(rel='stylesheet' href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css")
+        link(rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700,800&display=swap")
+        link(rel='stylesheet', href='css/common.css')
+        script(src="https://api-maps.yandex.ru/2.1/?apikey=c599d252-3a6f-4b64-872c-a529f6263f40&lang=ru_RU" type="text/javascript")
+    body
+        block header
+            mixin header
+                .container.flex_row__between.align_center.flex_wrap
+                    a(class="header__logo sz-logo" href="#")
+                        img(class="sz-logo__img" src="img/logo-stroyzakaz.png" alt="Логотип STROY-ZAKAZ")
+                        span.sz-logo__text STROY-ZAKAZ
+                    ul.sz-contact.text_color_black.header__contact
+                      li.sz-contact__item.sz-contact__item_phone +7 (861) 217-75-85
+                      li.sz-contact__item.sz-contact__item_phone +7 (861) 217-75-85
+                      li.sz-contact__item.sz-contact__item_phone +7 (861) 217-75-85
+                      li.sz-contact__item.sz-contact__item_email info@stroy-zakaz.ru
+                    button(class="header__call btn btn_transparent text_color_grey" type="button") Меня заменят
+            mixin subHeader
+                .container
+                    ul.nav.flex_row__around.align_center
+                        li.nav__item.dropdown.dropdown_down Категории
+                            ul
+                                li.dropdown.dropdown_right Брус обрезной
+                                    ul
+                                        li Брус обрезной ГОСТ
+                                        li Брус обрезной ТУ
+                                li Брус профилированный
+                                li.dropdown.dropdown_right Брус строганный
+                                    ul
+                                        li Брус обрезной ГОСТ
+                                        li Брус обрезной ТУ
+                                        li Брус обрезной ТУ
+                                        li Брус обрезной ТУ
+                                        li Брус обрезной ТУ
+                                li Брусок
+
+                        li.nav__item Доставка и оплата
+                        li.nav__item Контакты
+                        li.nav__item Контакты
+
+            if page == 'Главная'
+                header.header
+                    +header
+                .subHeader
+                    +subHeader
+            else if page != 'Главная'
+                header.header.notindexpage
+                    +header
+
+
+
+
+
+        block content
+            | Ling yellowtail flagtail southern flounder. Ribbon eel northern pike glass knifefish cepalin barbelless catfish cusk-eel ridgehead, mahi-mahi. Glass knifefish snubnose eel pompano dolphinfish lemon shark salmon duckbilled barracudina common tunny skate, codlet. Perch tarpon, zebra pleco--round herring jewfish, New Zealand sand diver. Spiny dwarf catfish slickhead clown triggerfish. Shad New Zealand sand diver cavefish banjo catfish bamboo shark spiny basslet, pigfish handfish.
+        block footer
+            footer.footer
+                .container
+                    .footer__firstLine.flex_row__between.flex_wrap.align_center
+                        a(class="footer__logo sz-logo" href="#")
+                            img(class="sz-logo__img" src="img/logo-stroyzakaz.png" alt="Логотип STROY-ZAKAZ")
+                            span.sz-logo__text STROY-ZAKAZ
+                        a(class="footer__privacyPolicy" href="") Политика конфиденциальности
+                        a(class="footer__userAgreement" href="") Пользовательское соглашение
+                        .footer__createdBy.createdBy Разработка сайта <a class="createdBy__link" href="https://rfim.ru/">rfim.ru</a>
+
+                    .footer__copyright 2019 STROY-ZAKAZ.RU ©<br>Все права защищены.
+
+        script(src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js')
+        script(src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js")
+        script(src='js/concat-js-libs.js')
+        script(src='js/common.js')

@@ -1,0 +1,119 @@
+extends pug-components/layout
+
+block append title
+    -page = 'Главная'
+
+block content
+    .topSliderSection
+        .slider.slider_wide.text_color_white.text_pos_center
+            .slider__item
+                img(class="slider__img" src="img/picture-slider-1.jpg")
+                .slider__overlay
+                .slider__title экологически чистое дерево
+                .slider__subtitle Наше дерево экологичекски чистое и правильно выращенное, поэтому наши пиломатериалы лучше чем у конкурентов
+            .slider__item
+                img(class="slider__img" src="img/picture-slider-1.jpg")
+                .slider__overlay
+                .slider__title экологически чистое дерево
+                .slider__subtitle Наше дерево экологичекски чистое и правильно выращенное, поэтому наши пиломатериалы лучше чем у конкурентов
+            .slider__item
+                img(class="slider__img" src="img/picture-slider-1.jpg")
+                .slider__overlay
+                .slider__title экологически чистое дерево
+                .slider__subtitle Наше дерево экологичекски чистое и правильно выращенное, поэтому наши пиломатериалы лучше чем у конкурентов
+
+    .featuresSection
+        .container
+            ul.features.flex_row__around.text_pos_center.flex_wrap
+                li.features__item Доставка по РФ по себестоимости!
+                li.features__item Мы принимаем к оплате любые платежи
+                li.features__item Работаем ежедневно, без выходных.
+
+    .catalogSection
+        .container
+            .title.title_h2
+                span.title__line
+                h2.title__text Каталог продукции
+                span.title__line
+            .catalog.flex_row__center.flex_wrap.text_pos_center
+                .catalog__item
+                    img(class="catalog__img" src="img/picture-catalog-1.jpg")
+                    span.catalog__text Брус обрезной
+                    a(class="catalog__btn btn btn_primary" href="") Подробнее
+                .catalog__item
+                    img(class="catalog__img" src="img/picture-catalog-1.jpg")
+                    span.catalog__text брус профилированый
+                    a(class="catalog__btn btn btn_primary" href="") Подробнее
+                .catalog__item
+                    img(class="catalog__img" src="img/picture-catalog-1.jpg")
+                    span.catalog__text Доска обрезная
+                    a(class="catalog__btn btn btn_primary" href="") Подробнее
+                .catalog__item
+                    img(class="catalog__img" src="img/picture-catalog-1.jpg")
+                    span.catalog__text Брус обрезной
+                    a(class="catalog__btn btn btn_primary" href="") Подробнее
+                .catalog__item
+                    img(class="catalog__img" src="img/picture-catalog-1.jpg")
+                    span.catalog__text Брус обрезной
+                    a(class="catalog__btn btn btn_primary" href="") Подробнее
+                .catalog__item
+                    img(class="catalog__img" src="img/picture-catalog-1.jpg")
+                    span.catalog__text Брус обрезной
+                    a(class="catalog__btn btn btn_primary" href="") Подробнее
+                .catalog__item
+                    img(class="catalog__img" src="img/picture-catalog-1.jpg")
+                    span.catalog__text Брус обрезной
+                    a(class="catalog__btn btn btn_primary" href="") Подробнее
+                .catalog__item
+                    img(class="catalog__img" src="img/picture-catalog-1.jpg")
+                    span.catalog__text Брус обрезной
+                    a(class="catalog__btn btn btn_primary" href="") Подробнее
+
+
+    .feedbackSection
+        .container
+            .title.title_h2
+                span.title__line
+                h2.title__text отзывы о нашей компании
+                span.title__line
+            .slider.slider_regular.text_pos_center
+                .slider__item.feedback
+                    img(class="feedback__img" src="img/picture-feedback-1.jpg")
+                    .feedback__name Павел Колесников
+                    .feedback__city г. Воронеж
+                    p.feedback__text Мне и брат, и коллега рекомендовали данный ресурс для заказа деревянного домика. Но всё как-то я не доверял этим отзывам. Покопался на сайте и что было, то и заказал – главное, чтоб побыстрее.  Тройку дней я всё же потерял за уточнениями проекта, за непроходимостью дорог к моей даче и т.д.
+                    p.feedback__text Но качество действительно очень даже. Стоит себе не качается.
+                    p.feedback__text И соседям нравится. Теперь вот и я рекомендую)
+                .slider__item.feedback
+                    img(class="feedback__img" src="img/picture-feedback-1.jpg")
+                    .feedback__name Павел Колесников
+                    .feedback__city г. Воронеж
+                    p.feedback__text Мне и брат, и коллега рекомендовали данный ресурс для заказа деревянного домика. Но всё как-то я не доверял этим отзывам. Покопался на сайте и что было, то и заказал – главное, чтоб побыстрее.  Тройку дней я всё же потерял за уточнениями проекта, за непроходимостью дорог к моей даче и т.д.
+                    p.feedback__text Но качество действительно очень даже. Стоит себе не качается.
+                    p.feedback__text И соседям нравится. Теперь вот и я рекомендую)
+                .slider__item.feedback
+                    img(class="feedback__img" src="img/picture-feedback-1.jpg")
+                    .feedback__name Павел Колесников
+                    .feedback__city г. Воронеж
+                    p.feedback__text Мне и брат, и коллега рекомендовали данный ресурс для заказа деревянного домика. Но всё как-то я не доверял этим отзывам. Покопался на сайте и что было, то и заказал – главное, чтоб побыстрее.  Тройку дней я всё же потерял за уточнениями проекта, за непроходимостью дорог к моей даче и т.д.
+                    p.feedback__text Но качество действительно очень даже. Стоит себе не качается.
+                    p.feedback__text И соседям нравится. Теперь вот и я рекомендую)
+
+
+    .contactSection
+        .container
+            .contact__wrap
+                .title.title_h2
+                    span.title__line
+                    h2.title__text Контакты
+                    span.title__line
+                ul.sz-contact.flex_row__around
+                    li.sz-contact__item.sz-contact__item_phone +7 (861) 217-75-85
+                    li.sz-contact__item.sz-contact__item_phone +7 (861) 217-75-85
+                    li.sz-contact__item.sz-contact__item_phone +7 (861) 217-75-85
+                    li.sz-contact__item.sz-contact__item_email info@stroy-zakaz.ru
+                    li.sz-contact__item.sz-contact__item_address Москва, Проектируемый проезд 134
+
+    .mapSection
+        #map_content
+
