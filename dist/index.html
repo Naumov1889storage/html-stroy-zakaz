@@ -9,47 +9,136 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700,800&amp;display=swap">
     <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/product.css">
     <script src="https://api-maps.yandex.ru/2.1/?apikey=c599d252-3a6f-4b64-872c-a529f6263f40&amp;lang=ru_RU" type="text/javascript"></script>
   </head>
   <body>
+    <!--if page == 'Главная'-->
+    <!--    header.header-->
+    <!--        +header-->
+    <!--    .subHeader-->
+    <!--        +subHeader-->
+    <!--else if page != 'Главная'-->
+    <!--    header.header.notindexpage-->
+    <!--        +header-->
     <header class="header">
-          <div class="container flex_row__between align_center flex_wrap"><a class="header__logo sz-logo" href="#"><img class="sz-logo__img" src="img/logo-stroyzakaz.png" alt="Логотип STROY-ZAKAZ"><span class="sz-logo__text">STROY-ZAKAZ</span></a>
+          <div class="container flex_row__between align_center flex_wrap"><a class="header__logo sz-logo" href="index.html"><img class="sz-logo__img" src="img/logo-stroyzakaz.png" alt="Логотип STROY-ZAKAZ"><span class="sz-logo__text">STROY-ZAKAZ</span></a>
             <ul class="sz-contact text_color_black header__contact">
-              <li class="sz-contact__item sz-contact__item_phone">+7 (861) 217-75-85</li>
-              <li class="sz-contact__item sz-contact__item_phone">+7 (861) 217-75-85</li>
-              <li class="sz-contact__item sz-contact__item_phone">+7 (861) 217-75-85</li>
+              <li class="sz-contact__item sz-contact__item_phone"><b>Москва:</b> +7 (861) 217-75-85</li>
+              <li class="sz-contact__item sz-contact__item_phone"><b>Москва:</b> +7 (861) 217-75-85</li>
+              <li class="sz-contact__item sz-contact__item_phone"><b>Москва:</b> +7 (861) 217-75-85</li>
               <li class="sz-contact__item sz-contact__item_email">info@stroy-zakaz.ru</li>
             </ul>
-            <button class="header__call btn btn_transparent text_color_grey" type="button">Меня заменят</button>
+            <!--button(class="header__call btn btn_transparent text_color_grey" type="button") Меня заменят-->
           </div>
     </header>
     <div class="subHeader">
           <div class="container">
-            <ul class="nav flex_row__around align_center">
-              <li class="nav__item dropdown dropdown_down">Категории
+            <ul class="nav dropdown flex_row__around align_center flex_wrap">
+              <li class="nav__item"><a class="link-spy arrow arrow_down desk" href="#catalogSection">Категории</a>
+<a class="arrow arrow_down mob">Категории</a>
                 <ul>
-                  <li class="dropdown dropdown_right">Брус обрезной
+                  <li><a class="arrow arrow_right" href="">Брус обрезной</a>
                     <ul>
-                      <li>Брус обрезной ГОСТ</li>
-                      <li>Брус обрезной ТУ</li>
+                      <li><a href="">Брус обрезной ГОСТ</a></li>
+                      <li><a href="">Брус обрезной ТУ</a></li>
                     </ul>
                   </li>
-                  <li>Брус профилированный</li>
-                  <li class="dropdown dropdown_right">Брус строганный
+                  <li><a class="arrow arrow_right" href="">Брус профилированный</a>
                     <ul>
-                      <li>Брус обрезной ГОСТ</li>
-                      <li>Брус обрезной ТУ</li>
-                      <li>Брус обрезной ТУ</li>
-                      <li>Брус обрезной ТУ</li>
-                      <li>Брус обрезной ТУ</li>
+                      <li><a href="">Брус профилированный</a></li>
+                      <li><a href="">Брус сухой профилированный</a></li>
                     </ul>
                   </li>
-                  <li>Брусок</li>
+                  <li><a class="arrow arrow_right" href="">Брус строганный</a>
+                    <ul>
+                      <li><a href="">Брус строганный</a></li>
+                      <li><a href="">Брус сухой строганный</a></li>
+                    </ul>
+                  </li>
+                  <li><a class="arrow arrow_right" href="">Брусок</a>
+                    <ul>
+                      <li><a href="">Брусок обрезной</a></li>
+                      <li><a href="">Брусок строганный</a></li>
+                    </ul>
+                  </li>
+                  <li><a class="arrow arrow_right" href="">Доска обрезная</a>
+                    <ul>
+                      <li><a href="">Брус и доска обрезная осина</a></li>
+                      <li><a href="">Доска обрезная</a></li>
+                      <li><a href="">Доска обрезная 2 сорт ГОСТ</a></li>
+                      <li><a href="">Доска обрезная 2 сорт ТУ</a></li>
+                      <li><a href="">Доска обрезная ГОСТ</a></li>
+                    </ul>
+                  </li>
+                  <li><a class="arrow arrow_right" href="">Доска половая</a>
+                    <ul>
+                      <li><a href="">Доска половая</a></li>
+                      <li><a href="">Доска сухая половая</a></li>
+                    </ul>
+                  </li>
+                  <li><a class="arrow arrow_right" href="">Доска строганная</a>
+                    <ul>
+                      <li><a href="">Доска строганная</a></li>
+                      <li><a href="">Доска сухая строганная</a></li>
+                    </ul>
+                  </li>
+                  <li><a class="arrow arrow_right" href="">Вагонка</a>
+                    <ul>
+                      <li><a href="">Вагонка</a></li>
+                      <li><a href="">Вагонка сухая</a></li>
+                      <li><a href="">Евровагонка</a></li>
+                    </ul>
+                  </li>
+                  <li><a class="arrow arrow_right" href="">Фанера ФК</a>
+                    <ul>
+                      <li><a href="">Сорт 3/4</a></li>
+                      <li><a href="">Сорт 4/4</a></li>
+                      <li><a href="">Фанера строительный</a></li>
+                    </ul>
+                  </li>
+                  <li><a class="arrow arrow_right" href="">Фанера ФСФ</a>
+                    <ul>
+                      <li><a href="">1220*2440 3/3</a></li>
+                      <li><a href="">1220х2440 3/4</a></li>
+                      <li><a href="">1220*2440 4/4</a></li>
+                      <li><a href="">1500*3000 4/4</a></li>
+                    </ul>
+                  </li>
+                  <li><a class="arrow arrow_right" href="">Фанера ламинированная</a>
+                    <ul>
+                      <li><a href="">1220х2440</a></li>
+                      <li><a href="">1500х3000</a></li>
+                    </ul>
+                  </li>
+                  <li><a class="arrow arrow_right" href="">OSB Плита</a>
+                    <ul>
+                      <li><a href="">OSB-3</a></li>
+                    </ul>
+                  </li>
+                  <li><a class="" href="">Блок Хаус</a></li>
+                  <li><a class="arrow arrow_right" href="">Имитация бруса</a>
+                    <ul>
+                      <li><a href="">Имитация бруса класс А</a></li>
+                      <li><a href="">Имитация бруса класс АВ</a></li>
+                      <li><a href="">Имитация бруса класс В</a></li>
+                      <li><a href="">Имитация бруса класс С</a></li>
+                    </ul>
+                  </li>
+                  <li><a class="arrow arrow_right" href="">Утеплитель</a>
+                    <ul>
+                      <li><a href="">Утеплитель ROCKWOOL</a></li>
+                      <li><a href="">Утеплитель URSA GEO</a></li>
+                      <li><a href="">Утеплитель IZOBEL</a></li>
+                      <li><a href="">Утеплитель IZOVOL</a></li>
+                      <li><a href="">Утеплитель ISOROC</a></li>
+                    </ul>
+                  </li>
                 </ul>
               </li>
-              <li class="nav__item">Доставка и оплата</li>
-              <li class="nav__item">Контакты</li>
-              <li class="nav__item">Контакты</li>
+              <li class="nav__item"><a href="">Доставка и оплата</a></li>
+              <li class="nav__item"><a class="link-spy" href="#feedbackSection">Отзывы</a></li>
+              <li class="nav__item"><a class="link-spy" href="#contactSection">Контакты</a></li>
             </ul>
           </div>
     </div>
@@ -81,24 +170,35 @@
         </ul>
       </div>
     </div>
-    <div class="catalogSection">
+    <div class="catalogSection" id="catalogSection">
       <div class="container">
         <div class="title title_h2"><span class="title__line"></span>
           <h2 class="title__text">Каталог продукции</h2><span class="title__line"></span>
         </div>
         <div class="catalog flex_row__center flex_wrap text_pos_center">
           <div class="catalog__item"><img class="catalog__img" src="img/picture-catalog-1.jpg"><span class="catalog__text">Брус обрезной</span><a class="catalog__btn btn btn_primary" href="">Подробнее</a></div>
-          <div class="catalog__item"><img class="catalog__img" src="img/picture-catalog-1.jpg"><span class="catalog__text">брус профилированый</span><a class="catalog__btn btn btn_primary" href="">Подробнее</a></div>
-          <div class="catalog__item"><img class="catalog__img" src="img/picture-catalog-1.jpg"><span class="catalog__text">Доска обрезная</span><a class="catalog__btn btn btn_primary" href="">Подробнее</a></div>
-          <div class="catalog__item"><img class="catalog__img" src="img/picture-catalog-1.jpg"><span class="catalog__text">Брус обрезной</span><a class="catalog__btn btn btn_primary" href="">Подробнее</a></div>
-          <div class="catalog__item"><img class="catalog__img" src="img/picture-catalog-1.jpg"><span class="catalog__text">Брус обрезной</span><a class="catalog__btn btn btn_primary" href="">Подробнее</a></div>
-          <div class="catalog__item"><img class="catalog__img" src="img/picture-catalog-1.jpg"><span class="catalog__text">Брус обрезной</span><a class="catalog__btn btn btn_primary" href="">Подробнее</a></div>
-          <div class="catalog__item"><img class="catalog__img" src="img/picture-catalog-1.jpg"><span class="catalog__text">Брус обрезной</span><a class="catalog__btn btn btn_primary" href="">Подробнее</a></div>
-          <div class="catalog__item"><img class="catalog__img" src="img/picture-catalog-1.jpg"><span class="catalog__text">Брус обрезной</span><a class="catalog__btn btn btn_primary" href="">Подробнее</a></div>
+          <div class="catalog__item"><img class="catalog__img" src="img/picture-catalog-2.jpg"><span class="catalog__text">брус строганный</span><a class="catalog__btn btn btn_primary" href="">Подробнее</a></div>
+          <div class="catalog__item"><img class="catalog__img" src="img/picture-catalog-3.jpg"><span class="catalog__text">брус профилированый</span><a class="catalog__btn btn btn_primary" href="">Подробнее</a></div>
+          <div class="catalog__item"><img class="catalog__img" src="img/picture-catalog-4.jpg"><span class="catalog__text">Доска обрезная</span><a class="catalog__btn btn btn_primary" href="">Подробнее</a></div>
+          <div class="catalog__item"><img class="catalog__img" src="img/picture-catalog-5.jpg"><span class="catalog__text">Доска строганная</span><a class="catalog__btn btn btn_primary" href="">Подробнее</a></div>
+          <div class="catalog__item"><img class="catalog__img" src="img/picture-catalog-6.jpg"><span class="catalog__text">Доска половая</span><a class="catalog__btn btn btn_primary" href="">Подробнее</a></div>
+          <div class="catalog__item"><img class="catalog__img" src="img/picture-catalog-7.jpg"><span class="catalog__text">Вагонка</span><a class="catalog__btn btn btn_primary" href="">Подробнее</a></div>
+          <div class="catalog__item"><img class="catalog__img" src="img/picture-catalog-8.jpg"><span class="catalog__text">Фанера фк</span><a class="catalog__btn btn btn_primary" href="">Подробнее</a></div>
+          <div class="catalog__item"><img class="catalog__img" src="img/picture-catalog-9.jpg"><span class="catalog__text">Фанера фсф</span><a class="catalog__btn btn btn_primary" href="">Подробнее</a></div>
+          <div class="catalog__item"><img class="catalog__img" src="img/picture-catalog-10.jpg"><span class="catalog__text">Фанера ламинированная</span><a class="catalog__btn btn btn_primary" href="">Подробнее</a></div>
+          <div class="catalog__item"><img class="catalog__img" src="img/picture-catalog-11.jpg"><span class="catalog__text">osb плита</span><a class="catalog__btn btn btn_primary" href="">Подробнее</a></div>
+          <div class="catalog__item"><img class="catalog__img" src="img/picture-catalog-12.jpg"><span class="catalog__text">имитация бруса</span><a class="catalog__btn btn btn_primary" href="">Подробнее</a></div>
+          <div class="catalog__item"><img class="catalog__img" src="img/picture-catalog-13.jpg"><span class="catalog__text">БЛОК ХАУС</span><a class="catalog__btn btn btn_primary" href="">Подробнее</a></div>
+          <div class="catalog__item"><img class="catalog__img" src="img/picture-catalog-14.jpg"><span class="catalog__text">брусок обрезной</span><a class="catalog__btn btn btn_primary" href="">Подробнее</a></div>
+          <div class="catalog__item"><img class="catalog__img" src="img/picture-catalog-15.jpg"><span class="catalog__text">брусок строганный</span><a class="catalog__btn btn btn_primary" href="">Подробнее</a></div>
+          <div class="catalog__item"><img class="catalog__img" src="img/picture-catalog-16.jpg"><span class="catalog__text">Паркетная доска</span><a class="catalog__btn btn btn_primary" href="">Подробнее</a></div>
+          <div class="catalog__item"><img class="catalog__img" src="img/picture-catalog-17.jpg"><span class="catalog__text">Террасная доска</span><a class="catalog__btn btn btn_primary" href="">Подробнее</a></div>
+          <div class="catalog__item"><img class="catalog__img" src="img/picture-catalog-18.jpg"><span class="catalog__text">Пиллеты</span><a class="catalog__btn btn btn_primary" href="">Подробнее</a></div>
+          <div class="catalog__item"><img class="catalog__img" src="img/picture-catalog-19.jpg"><span class="catalog__text">Брикеты</span><a class="catalog__btn btn btn_primary" href="">Подробнее</a></div>
         </div>
       </div>
     </div>
-    <div class="feedbackSection">
+    <div class="feedbackSection" id="feedbackSection">
       <div class="container">
         <div class="title title_h2"><span class="title__line"></span>
           <h2 class="title__text">отзывы о нашей компании</h2><span class="title__line"></span>
@@ -128,7 +228,7 @@
         </div>
       </div>
     </div>
-    <div class="contactSection">
+    <div class="contactSection" id="contactSection">
       <div class="container">
         <div class="contact__wrap">
           <div class="title title_h2"><span class="title__line"></span>

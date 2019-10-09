@@ -31,7 +31,7 @@ WHITE = #ffffff
     display: flex
     align-items: center
     justify-content: center
-    
+
     //width: 230px;
     max-width: 100%;
     padding: 0 58px 0 58px
@@ -46,10 +46,12 @@ WHITE = #ffffff
     text-transform: uppercase
     letter-spacing: 0.6px
     color: BLACK
+
     &:hover {
       box-shadow: none;
     }
   }
+
   &_transparent {
     //width: 212px;
     height: 52px;
@@ -69,6 +71,7 @@ WHITE = #ffffff
   &_color_primary {
     border: 1px solid PRIMARY
   }
+
   &_color_grey {
     border: 1px solid #f0efef
   }
@@ -80,17 +83,21 @@ WHITE = #ffffff
     &_black * {
       color: BLACK
     }
+
     &_mildblack * {
       color: MILDBLACK
     }
+
     &_grey * {
       color: GREY
     }
+
     &_white * {
       color: WHITE
     }
   }
-  &_pos{
+
+  &_pos {
     &_center {
       text-align: center
     }
@@ -99,38 +106,52 @@ WHITE = #ffffff
 
 .title {
   &_h2,
-  & .title__text{
+  & .title__text {
     color: #353535
     font-size: 26px
     font-weight: 700
-    line-height: 24px
+    line-height: 35px
     text-transform: uppercase
     text-align: center
   }
+
   &_h2 {
     display: flex
     align-items: center
     justify-content: center
-    margin: 120px 0 30px 0
+    margin: 110px 0 20px 0
   }
+
   &__text {
   }
+
   &__line {
-    margin: 0 40px 0 40px
+    margin: 0 4% 0 4%
     max-width: 210px
-    width: 100%
+    width: 30%
     height: 3px
     background-color: PRIMARY
+
+    &:first-child {
+      margin-left: 0
+    }
+
+    &:last-child {
+      margin-right: 0
+    }
+
   }
 }
 
 .sz-logo {
   display: flex
   align-items: center
+
   &__img {
     width: 64px
     height: 64px
   }
+
   &__text {
     min-width: 200px
     padding-left: 28px
@@ -141,69 +162,221 @@ WHITE = #ffffff
   }
 }
 
-
-
-
+// dropdown
+// Set the parent <li>’s CSS position property to ‘relative’.
 .dropdown {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
 
-  // Set the parent <li>’s CSS position property to ‘relative’.
+.dropdown li {
   display: block;
   position: relative;
-  z-index: 1
   float: left;
+  background: #ffffff;
+}
 
-  li {
+// The CSS to hide the sub menus.
+.dropdown li ul {
+  display: none;
+  border-top: 1px solid PRIMARY
+
+  * {
+    color: #2f2f2f
+    font-size: 15px !important
+    font-weight: 600
+    letter-spacing: 0.38px
+  }
+}
+
+.dropdown ul li a {
+  display: block;
+  padding: 12px 55px 12px 23px;
+  text-decoration: none;
+  white-space: nowrap;
+  border: 1px solid PRIMARY
+  border-top: none
+}
+
+.dropdown ul li a:hover {
+  background: #2c3e50;
+}
+
+// Displays the dropdown menu on hover.
+//li:hover > ul {
+.dropdown li:hover > ul {
+  display: block;
+  position: absolute;
+  z-index: 2
+}
+
+.dropdown li:hover li {
+  float: none;
+}
+
+.dropdown li:hover a {
+  background: #ffffff;
+}
+
+.dropdown li:hover li a:hover {
+  background: PRIMARY;
+}
+
+// Displays second level dropdown menus to the right of the first level dropdown menu.
+.dropdown ul ul {
+  left: 100%;
+  top: 0;
+  margin-left: -1px
+}
+
+// Simple clearfix.
+.dropdown ul:before,
+.dropdown ul:after,
+ul.dropdown:before,
+ul.dropdown:after {
+  content: " "; /* 1 */
+  display: table; /* 2 */
+}
+
+.dropdown ul:after, ul.dropdown:after {
+  clear: both;
+}
+
+
+.arrow {
+  position: relative;
+  padding-right: 20px
+
+  &:after {
+    content: ''
+    position: absolute;
+    top: 50%
+    transform: translateY(-50%)
+    width: 10px
+    height: 6px
+    background: url("../img/icon-arrow.png")
+  }
+
+  &_right {
     display: flex
     align-items: center
-    height: 43px
-    padding: 0 0 0 23px
-    border-bottom: 1px solid PRIMARY
-    border-right: 1px solid PRIMARY
-    border-left: 1px solid PRIMARY
-    background: WHITE
-    &:hover {
-      background: PRIMARY
+    width: 100%
+    height: 100%
+
+    &:after {
+      right: 30px
+      margin-top: -4px
+      transform: rotate(-90deg)
     }
   }
 
-  // The CSS to hide the sub menus.
-  & ul { display: none; }
-
-  // Displays the dropdown menu on hover.
-  &:hover > ul {
-    display: block;
-    position: absolute;
-
-    width: 325px
+  &_down {
+    &:after {
+      right: 0
+    }
   }
-  &:hover li { float: none; }
-
-  // Displays second level dropdown menus to the right of the first level dropdown menu.
-  & ul ul {
-    left: 100%;
-    top: 0;
-  }
-
-  // Simple clearfix.
-  & ul:before,
-  & ul:after {
-    content: " "; /* 1 */
-    display: table; /* 2 */
-  }
-  & ul:after { clear: both; }
-
 }
+
+
+//.dropdown {
+//  .arrow {
+//    position: relative;
+//    padding-right: 20px
+//
+//    &:after {
+//      content: ''
+//      position: absolute;
+//      top: 50%
+//      transform: translateY(-50%)
+//      width: 10px
+//      height: 6px
+//      background: url("../img/icon-arrow.png")
+//    }
+//
+//    &_right {
+//      display: flex
+//      align-items: center
+//      width: 100%
+//      height: 100%
+//
+//      &:after {
+//        right: 30px
+//        margin-top: -4px
+//        transform: rotate(-90deg)
+//      }
+//    }
+//
+//    &_down {
+//      &:after {
+//        right: 0
+//      }
+//    }
+//  }
+//
+//  // Set the parent <li>’s CSS position property to ‘relative’.
+//
+//
+//  li {
+//    position: relative;
+//    display: flex
+//    align-items: center
+//    min-height: 43px
+//
+//    border-bottom: 1px solid #ffe2a4
+//    border-right: 1px solid #ffe2a4
+//    border-left: 1px solid #ffe2a4
+//    background: WHITE
+//
+//    a {
+//      position: absolute !important
+//      display: flex
+//      width: 100%
+//      height: 100%
+//      padding: 10px 15px 10px 23px
+//      top: 0
+//    }
+//
+//    &:hover {
+//      background: PRIMARY
+//      border-color: PRIMARY
+//    }
+//  }
+//
+//  // The CSS to hide the sub menus.
+//  & ul {
+//    display: none;
+//  }
+//
+//  // Displays the dropdown menu on hover.
+//  //&:hover > ul {
+//  & > ul {
+//    display: block;
+//    position: absolute;
+//    width: 325px
+//  }
+//
+//  // Displays second level dropdown menus to the right of the first level dropdown menu.
+//  &.dropdown_right ul {
+//    left: 100%;
+//    top: 0;
+//  }
+//}
+
 
 .slick-dots {
   bottom: -43px
+
   li {
     width: 13px
     height: 13px
     border: 1px solid PRIMARY
     border-radius: 50%
+
     &.slick-active {
       background: PRIMARY
     }
+
     button {
       &:before {
         display: none
@@ -211,39 +384,46 @@ WHITE = #ffffff
     }
   }
 }
+
 .slick-list {
   height: 100%
 }
+
 .slick-track {
   height: 100%
 }
+
 .slider {
   height: 100%
+
   .slider__item {
     height: 100%
   }
+
   &_regular {
 
   }
 }
+
 .slick-arrow {
   &.slick-prev,
   &.slick-next {
     width: 48px
     height: 48px
     background: url("../img/iconset-slider-btn.png") no-repeat
+
     &:before {
       display: none
     }
   }
 
   &.slick-prev {
-    left: -96px
+    left: -60px
     background-position: -2px -2px
   }
 
   &.slick-next {
-    right: -96px
+    right: -60px
     background-position: -54px -2px
   }
 }
@@ -251,6 +431,7 @@ WHITE = #ffffff
 .sz-contact {
   display: flex
   flex-wrap: wrap
+
   &__item {
     position: relative;
     display: flex
@@ -259,6 +440,13 @@ WHITE = #ffffff
     font-size: 18px
     //line-height: 22px
     font-weight: 500
+
+    b {
+      margin-right: 5px
+      font-weight: 600
+      color: #191919;
+    }
+
     &:before {
       content: ''
       position: absolute;
@@ -270,6 +458,7 @@ WHITE = #ffffff
       background-image: url("../img/iconset-contact.png")
       background-repeat: no-repeat
     }
+
     &_phone {
       &:before {
         width: 20px
@@ -277,6 +466,7 @@ WHITE = #ffffff
         background-position: -2px -22px
       }
     }
+
     &_email {
       &:before {
         width: 21px
@@ -284,6 +474,7 @@ WHITE = #ffffff
         background-position: -2px -2px
       }
     }
+
     &_address {
       &:before {
         width: 21px
@@ -298,42 +489,63 @@ WHITE = #ffffff
 .header {
   min-height: 105px;
   border-bottom: 1px solid PRIMARY
+
   .container {
     min-height: 105px;
   }
+
   &__contact {
     margin: 10px 0 10px 10px
-    min-width: 455px
-    width: 45%
+    min-width: 580px
+    width: 60%
+
     .sz-contact__item {
       width: 50%
       padding: 8px 3% 8px 32px;
     }
   }
+
   &__logo {
     margin: 10px 20px 10px 10px
   }
+
   &__call {
     margin: 10px 0 10px 10px
   }
 }
 
 .subHeader {
-  height: 69px
+
+  position: relative;
+  z-index: 1
+
+  min-height: 69px
   border-bottom: 1px solid PRIMARY
+
+  .container {
+    min-height: 69px;
+  }
+
   .nav {
-    height: 100%
-    color: BLACK
-    font-size: 18px
-    font-weight: 600
-    letter-spacing: 0.45px
-    .dropdown ul {
-      padding-top: 25px
-      ul {
-        padding-top: 0
-      }
+    min-height: 69px;
+
+    * {
+      color: BLACK
+      font-size: 18px
+      font-weight: 600
+      letter-spacing: 0.45px
     }
 
+    & > li {
+      height: 100%
+
+      & > a {
+        display: flex
+        align-items: center
+        padding: 20px
+        height: 100%
+      }
+    }
   }
 }
 
@@ -342,10 +554,12 @@ WHITE = #ffffff
 
   .slider {
     position: relative;
+
     .slick-dots {
       position: absolute;
       bottom: 38px
     }
+
     .slider__item {
       position: relative;
       z-index: 0
@@ -355,6 +569,7 @@ WHITE = #ffffff
       align-items: center
       padding: 0 30px 0 30px
     }
+
     &__overlay {
       position: absolute;
       z-index: 0
@@ -362,8 +577,9 @@ WHITE = #ffffff
       left: 0
       width: 100%
       height: 100%
-      background: rgba(0,0,0,.75)
+      background: rgba(0, 0, 0, .75)
     }
+
     &__img {
       position: absolute;
       z-index: 0
@@ -371,6 +587,7 @@ WHITE = #ffffff
       height: 100%;
       object-fit: cover
     }
+
     &__title {
       position: relative;
       max-width 870px
@@ -378,6 +595,7 @@ WHITE = #ffffff
       font-weight: 800
       text-transform: uppercase
     }
+
     &__subtitle {
       position: relative;
       margin-top: 15px
@@ -396,6 +614,7 @@ WHITE = #ffffff
   font-weight: 600
   line-height: 25px
   text-transform: uppercase
+
   .features {
     &__item {
       position: relative;
@@ -403,6 +622,7 @@ WHITE = #ffffff
       max-width: 250px
       width: max-content
       padding-top: 95px
+
       &:before {
         content: ''
         position: absolute;
@@ -414,6 +634,7 @@ WHITE = #ffffff
         background-image: url("../img/iconset-features.png")
         background-repeat: no-repeat
       }
+
       &:nth-child(1) {
         &:before {
           width: 95px
@@ -421,6 +642,7 @@ WHITE = #ffffff
           background-position: -5px -87px
         }
       }
+
       &:nth-child(2) {
         &:before {
           width: 72px
@@ -428,6 +650,7 @@ WHITE = #ffffff
           background-position: -5px -5px
         }
       }
+
       &:nth-child(3) {
         &:before {
           width: 76px
@@ -451,8 +674,10 @@ WHITE = #ffffff
     }
   }
 }
+
 .catalog {
   margin: 0 -15px 0 -15px
+
   &__item {
     display: flex
     flex-direction: column
@@ -466,9 +691,11 @@ WHITE = #ffffff
     //height: 390px
     border: 1px solid #f0efef
   }
+
   &__img {
     margin-bottom: 30px
   }
+
   &__text {
     margin: 0 12px 0 12px
     color: #353535
@@ -477,6 +704,7 @@ WHITE = #ffffff
     line-height: 24px
     text-transform: uppercase
   }
+
   &__btn {
     margin: 25px 12px 34px 12px
     width: 90%
@@ -486,10 +714,12 @@ WHITE = #ffffff
 .feedbackSection {
   .slider {
     margin: 0 65px 0 65px;
+
     &__item {
 
     }
   }
+
   .feedback {
     display: flex
     flex-direction: column
@@ -498,6 +728,7 @@ WHITE = #ffffff
     margin-top: 60px
     border: 1px solid #f0efef
     padding-bottom: 30px
+
     &__img {
       margin: -46px auto 20px auto
       width: 93px
@@ -505,12 +736,14 @@ WHITE = #ffffff
       border: 2px solid PRIMARY
       border-radius: 50%
     }
+
     &__name {
       padding: 0 11% 0 11%
       font-size: 24px
       font-weight: 500
       line-height: 24px
     }
+
     &__city {
       margin: 3px 0 15px 0
       padding: 0 11% 0 11%
@@ -519,11 +752,22 @@ WHITE = #ffffff
       font-weight: 500
       line-height: 24px
     }
+
     &__text {
       padding: 0 11% 0 11%
       font-size: 18px
       font-style: italic
       line-height: 28px
+    }
+  }
+
+  .slick-arrow {
+    &.slick-prev {
+      left: -96px
+    }
+
+    &.slick-next {
+      right: -96px
     }
   }
 }
@@ -532,16 +776,19 @@ WHITE = #ffffff
   position: relative;
   z-index: 1
   margin: 145px 0 -130px 0
+
   .title_h2 {
     margin-top: 53px
     margin-bottom: 20px
   }
+
   .contact__wrap {
     min-height: 263px
     padding: 0 25px 25px 25px
     border: 1px solid #fdbd33
     background-color: #ffffff
   }
+
   .sz-contact {
     &__item {
       padding: 20px 25px 20px 32px;
@@ -551,6 +798,7 @@ WHITE = #ffffff
 
 .mapSection {
   background: #929292
+
   #map_content {
     height: 660px
   }
@@ -559,12 +807,16 @@ WHITE = #ffffff
 .footer {
   position: relative;
   padding: 30px 0 120px 0
+  border-top: 1px solid PRIMARY
+
   &, .container {
     //min-height: 184px;
   }
+
   &__logo {
     margin-right: 15px
   }
+
   &__privacyPolicy,
   &__userAgreement {
     margin: 15px
@@ -573,10 +825,16 @@ WHITE = #ffffff
     font-weight: 400
     line-height: 24px
     text-decoration: underline
+
+    &:hover {
+      text-decoration: none
+    }
   }
+
   &__createdBy {
     margin: 15px 0 15px 15px
   }
+
   .createdBy {
     width: 145px
     color: #141414
@@ -585,12 +843,18 @@ WHITE = #ffffff
     line-height: 20px
     letter-spacing: 0.38px
     text-align: right
+
     &__link {
       color: #008ea9
       letter-spacing: 0.38px
       text-decoration: underline
+
+      &:hover {
+        text-decoration: none
+      }
     }
   }
+
   &__copyright {
     position: absolute;
     bottom: 30px
@@ -604,18 +868,69 @@ WHITE = #ffffff
   }
 }
 
+
+@media (max-width: 1200px) {
+  .feedbackSection {
+    .slick-arrow {
+      &.slick-prev {
+        left: -60px
+      }
+
+      &.slick-next {
+        right: -60px
+      }
+    }
+  }
+}
+
 @media (max-width: 1070px) {
   .header {
+    padding: 15px 0 15px 0
+
     &__contact {
       width: 50%
     }
   }
 }
-
+.mob {
+  display: none !important
+}
 @media (max-width: 900px) {
   .title {
     &_h2 {
       margin-top: 80px
+    }
+  }
+
+  .desk {
+    display: none !important
+  }
+
+  .mob {
+    display: block
+  }
+
+  .dropdown li > ul > li ul {
+    display: none !important
+  }
+
+  .arrow {
+    padding-right: 23px !important
+
+    &:after {
+      display: none
+    }
+  }
+
+  .subHeader {
+    .nav {
+      &__item {
+        .arrow.arrow_down {
+          &:after {
+            display: block
+          }
+        }
+      }
     }
   }
 
@@ -624,16 +939,20 @@ WHITE = #ffffff
       flex-direction: column
       align-items: flex-start
     }
+
     &__logo {
       margin-bottom: 35px
     }
+
     &__copyright {
       text-align: left
     }
+
     &__privacyPolicy,
     &__userAgreement {
       margin: 8px 0 8px 0
     }
+
     &__createdBy.createdBy {
       display: inline
       margin: 8px 0 0 0
@@ -643,5 +962,107 @@ WHITE = #ffffff
 }
 
 @media (max-width: 730px) {
+  .container {
+    padding: 0 15px 0 15px
+  }
 
+  .topSliderSection {
+    .slider {
+      .slider__item {
+        padding: 0 15px 0 15px;
+      }
+
+      &__title {
+        font-size: 35px
+      }
+
+      &__subtitle {
+        font-size: 18px
+      }
+    }
+  }
+
+  .subHeader {
+
+    .nav {
+      & > li {
+        width: 100%
+
+        & > a {
+          &.arrow.arrow_down {
+            &:after {
+              right: 15px
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .feedbackSection {
+    .slider {
+      margin: 0 -32px 0 -32px;
+    }
+
+    .slick-arrow {
+      display: none
+    }
+
+    .feedback {
+      &__name,
+      &__city,
+      &__text {
+        padding: 0 32px 0 32px
+      }
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .header {
+    &__contact {
+      width: 100%
+      min-width: 100%
+      margin: 10px 10px 10px 10px;
+    }
+  }
+
+  .contactSection {
+    .sz-contact {
+      justify-content: flex-start
+
+      &__item {
+        width: 100%
+      }
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  .header {
+    &__contact {
+      width: 100%
+      min-width: 100%
+
+      .sz-contact__item {
+        width: 100%
+      }
+    }
+  }
+
+  .topSliderSection {
+    .slider {
+      .slider__item {
+        padding: 0 15px 0 15px;
+      }
+
+      &__title {
+        font-size: 30px
+      }
+
+      &__subtitle {
+        font-size: 16px
+      }
+    }
+  }
 }
