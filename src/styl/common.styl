@@ -892,9 +892,11 @@ ul.dropdown:after {
     }
   }
 }
+
 .mob {
   display: none !important
 }
+
 @media (max-width: 900px) {
   .title {
     &_h2 {
@@ -907,7 +909,7 @@ ul.dropdown:after {
   }
 
   .mob {
-    display: block
+    display: flex !important
   }
 
   .dropdown li > ul > li ul {
@@ -1018,6 +1020,20 @@ ul.dropdown:after {
   }
 }
 
+
+@media (max-width: 630px) {
+  .header {
+    &__contact {
+      width: 100%
+      min-width: 100%
+
+      .sz-contact__item {
+        width: 100%
+      }
+    }
+  }
+}
+
 @media (max-width: 600px) {
   .header {
     &__contact {
@@ -1039,17 +1055,6 @@ ul.dropdown:after {
 }
 
 @media (max-width: 500px) {
-  .header {
-    &__contact {
-      width: 100%
-      min-width: 100%
-
-      .sz-contact__item {
-        width: 100%
-      }
-    }
-  }
-
   .topSliderSection {
     .slider {
       .slider__item {
