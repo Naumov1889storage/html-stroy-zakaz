@@ -206,6 +206,7 @@ WHITE = #ffffff
 // Displays the dropdown menu on hover.
 //li:hover > ul {
 .dropdown li:hover > ul {
+  //.dropdown li > ul {
   display: block;
   position: absolute;
   z-index: 2
@@ -539,10 +540,14 @@ ul.dropdown:after {
     & > li {
       height: 100%
 
+      & > ul {
+        padding-top: 0px
+      }
+
       & > a {
         display: flex
         align-items: center
-        padding: 20px
+        padding: 23px
         height: 100%
       }
     }

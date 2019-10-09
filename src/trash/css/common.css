@@ -332,10 +332,13 @@ ul.dropdown:after {
 .subHeader .nav > li {
   height: 100%;
 }
+.subHeader .nav > li > ul {
+  padding-top: 0px;
+}
 .subHeader .nav > li > a {
   display: flex;
   align-items: center;
-  padding: 20px;
+  padding: 23px;
   height: 100%;
 }
 .topSliderSection {

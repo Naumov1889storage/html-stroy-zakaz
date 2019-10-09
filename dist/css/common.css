@@ -387,6 +387,9 @@ ul.dropdown:after {
 .subHeader .nav > li {
   height: 100%;
 }
+.subHeader .nav > li > ul {
+  padding-top: 0px;
+}
 .subHeader .nav > li > a {
   display: -webkit-box;
   display: -webkit-flex;
@@ -396,7 +399,7 @@ ul.dropdown:after {
   -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 20px;
+  padding: 23px;
   height: 100%;
 }
 .topSliderSection {
