@@ -14,22 +14,34 @@ html(lang="ru-Ru")
         link(rel='stylesheet', href='css/common.css')
         link(rel='stylesheet', href='css/product.css')
         script(src="https://api-maps.yandex.ru/2.1/?apikey=c599d252-3a6f-4b64-872c-a529f6263f40&lang=ru_RU" type="text/javascript")
+        <link rel="shortcut icon" href="img/favicon-stroyzakaz.ico" type="image/x-icon">
+        <link rel="icon" href="img/favicon-stroyzakaz.ico" type="image/x-icon">
     body
         block header
             mixin header
-                .container.flex_row__between.align_center.flex_wrap
-                    a(class="header__logo sz-logo" href="index.html")
-                        img(class="sz-logo__img" src="img/logo-stroyzakaz.png" alt="Логотип STROY-ZAKAZ")
-                        span.sz-logo__text STROY-ZAKAZ
+                .container.flex_row__between.align_center
+                    if page == 'Главная'
+                        a(class="header__logo sz-logo")
+                            img(class="sz-logo__img" src="img/logo-stroyzakaz.png" alt="Логотип STROY-ZAKAZ")
+                            span.sz-logo__text STROY<span class='sz-logo__hyphen'>&#8209</span>ZAKAZ
+                    else if page != 'Главная'
+                        a(class="header__logo sz-logo" href="index.html")
+                            img(class="sz-logo__img" src="img/logo-stroyzakaz.png" alt="Логотип STROY-ZAKAZ")
+                            span.sz-logo__text STROY<span class='sz-logo__hyphen'>&#8209</span>ZAKAZ
+
                     ul.sz-contact.text_color_black.header__contact
                       li.sz-contact__item.sz-contact__item_phone <b>Москва:</b> +7 (861) 217-75-85
                       li.sz-contact__item.sz-contact__item_phone <b>Москва:</b> +7 (861) 217-75-85
                       li.sz-contact__item.sz-contact__item_phone <b>Москва:</b> +7 (861) 217-75-85
                       li.sz-contact__item.sz-contact__item_email info@stroy-zakaz.ru
                     //button(class="header__call btn btn_transparent text_color_grey" type="button") Меня заменят
+                    button.burger
+                        i
             mixin subHeader
                 .container
-                    ul.nav.dropdown.flex_row__around.align_center.flex_wrap
+                    button.burger
+                        i
+                    ul.nav.dropdown.active.flex_row__around.align_center.flex_wrap
                         li.nav__item
                             a(class=page == 'Главная' ? "link-spy arrow arrow_down desk" : "arrow arrow_down desk" href=page == 'Главная' ? "#catalogSection" : "index.html#catalogSection") Категории
                             <a class="arrow arrow_down mob">Категории</a>
@@ -154,7 +166,7 @@ html(lang="ru-Ru")
                     .footer__firstLine.flex_row__between.flex_wrap.align_center
                         a(class="footer__logo sz-logo" href="#")
                             img(class="sz-logo__img" src="img/logo-stroyzakaz.png" alt="Логотип STROY-ZAKAZ")
-                            span.sz-logo__text STROY-ZAKAZ
+                            span.sz-logo__text STROY&#8209ZAKAZ
                         a(class="footer__privacyPolicy" href="") Политика конфиденциальности
                         a(class="footer__userAgreement" href="") Пользовательское соглашение
                         .footer__createdBy.createdBy Разработка сайта <a class="createdBy__link" href="https://rfim.ru/">rfim.ru</a>

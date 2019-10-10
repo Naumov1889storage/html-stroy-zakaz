@@ -3,11 +3,15 @@ $(function () {
     $('.slider_wide').slick({
         arrows: false,
         dots: true,
+        autoplay: true,
+        autoplaySpeed: 4000,
     });
 
     $('.slider_regular').slick({
         arrows: true,
         dots: true,
+        autoplay: true,
+        autoplaySpeed: 8000,
     });
 
     var linkSpy = $('.link-spy');
@@ -29,6 +33,55 @@ $(function () {
         }, 300);
 
     });
+
+
+    if ($(window).width() < 900) {
+        $(document).click(function(e) {
+            var area = $(e.target).parents().addBack();
+            if (!(area.is('.dropdown'))) {
+                $('.dropdown .arrow').next().removeClass('active');
+            }
+        });
+
+        $('.dropdown .arrow.mob').click(function (e) {
+            $(this).next().toggleClass('active');
+
+            // var area = e.target;
+            //
+            // //get all parents
+            // var areaArray = [];
+            // while (area) {
+            //     areaArray.unshift(area);
+            //     area = area.parentElement;
+            // };
+            //
+            // //check if some of parents have class 'block'
+            // var bool = areaArray.some(function(num) {
+            //     return num.className == 'dropdown'
+            // });
+            //
+            // if (!bool) {
+            //     console.log('dfgdfg');
+            //     document.querySelector('ul').classList.remove('active')
+            // }
+        });
+    }
+
+    $('.burger').click(function () {
+        $('.burger').toggleClass('burger_active');
+        $('.subHeader').toggleClass('mob_show');
+        $('body').toggleClass('active');
+        // $('.header .top').toggleClass('top_active');
+        // $('.overlay').fadeToggle(300);
+    });
+    // $('.subHeader .burger').click(function () {
+    //     $(this).removeClass('burger_active');
+    //     $('.subHeader').removeClass('mob_show');
+    //     $('body').removeClass('active');
+    //     // $('.header .top').toggleClass('top_active');
+    //     // $('.overlay').fadeToggle(300);
+    // });
+
 
 
     // window.onscroll = function () {

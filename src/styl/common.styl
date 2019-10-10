@@ -23,6 +23,10 @@ WHITE = #ffffff
   height: 100%
 }
 
+body.active {
+  position: fixed;
+}
+
 .sticky {
   position: fixed !important
   top: 0
@@ -154,11 +158,10 @@ WHITE = #ffffff
 
   &__img {
     width: 64px
-    height: 64px
+    //height: 64px
   }
 
   &__text {
-    min-width: 200px
     padding-left: 28px
     color: BLACK
     font-size: 23px
@@ -247,6 +250,14 @@ ul.dropdown:after {
 
 .dropdown ul:after, ul.dropdown:after {
   clear: both;
+}
+.dropdown ul.active {
+  display: block;
+  position: absolute;
+  z-index: 2
+  li {
+    float: none
+  }
 }
 
 
@@ -417,17 +428,18 @@ ul.dropdown:after {
 
   &__contact {
     margin: 10px 0 10px 10px
-    min-width: 580px
+    min-width: 520px
     width: 60%
 
     .sz-contact__item {
-      width: 50%
+      width: max-content
       padding: 8px 3% 8px 32px;
     }
   }
 
   &__logo {
-    margin: 10px 20px 10px 10px
+    margin: 10px 20px 10px 0
+
   }
 
   &__call {
@@ -442,6 +454,10 @@ ul.dropdown:after {
 
   min-height: 69px
   border-bottom: 1px solid PRIMARY
+  
+  .burger {
+    display: none
+  }
 
   .container {
     min-height: 69px;
@@ -783,6 +799,8 @@ ul.dropdown:after {
   &__copyright {
     position: absolute;
     bottom: 30px
+    left: 30px
+    right: 30px
     width: 100%
     color: #323232
     font-family: Montserrat
@@ -812,14 +830,34 @@ ul.dropdown:after {
   .header {
     padding: 15px 0 15px 0
 
+    &__logo {
+      .sz-logo {
+        &__img {
+          width: 60px
+        }
+        &__text {
+          padding-left: 20px
+          font-size: 20px
+        }
+      }
+    }
+
     &__contact {
-      width: 50%
+      width: 65%
+    }
+    .sz-contact {
+      &__item {
+        font-size: 16px
+      }
     }
   }
 }
 
 .mob {
   display: none !important
+}
+.burger {
+  display: none
 }
 
 @media (max-width: 900px) {
@@ -840,6 +878,9 @@ ul.dropdown:after {
   .dropdown li > ul > li ul {
     display: none !important
   }
+  .dropdown li > ul:not(.active) {
+    display: none
+  }
 
   .arrow {
     padding-right: 23px !important
@@ -849,7 +890,36 @@ ul.dropdown:after {
     }
   }
 
+  .header {
+
+    &__logo {
+      .sz-logo {
+        &__hyphen {
+          display: block
+          font-size: 0
+        }
+      }
+    }
+
+    &__contact {
+      margin-left: 10%
+      width: 70%
+    }
+    .sz-contact {
+      &__item {
+        //width: 100%
+        font-size: 16px
+      }
+    }
+  }
+
   .subHeader {
+    //position: fixed;
+    //top: 0//-100%
+    //width: 100%
+    //height: 100%
+    //background: #ffffff
+    //overflow: auto
     .nav {
       &__item {
         .arrow.arrow_down {
@@ -893,14 +963,49 @@ ul.dropdown:after {
     padding: 0 15px 0 15px
   }
 
+  .burger {
+    display: block;
+
+    i,
+    i::before,
+    i::after {
+      background: MILDBLACK
+    }
+    //&_active {
+    //  z-index: 11
+    //}
+  }
+
+  .header {
+    padding: 5px 0 5px 0;
+    &__logo {
+      //flex-direction: column
+      //.sz-logo {
+      //  &__text {
+      //    padding: 10px 0 0 0
+      //    font-size: 18px
+      //  }
+      //}
+    }
+    &__contact {
+      margin: 10px 2% 10px 2%
+      min-width: auto
+      width: 280px;
+      .sz-contact__item {
+        width: 100%
+      }
+    }
+  }
+
   .topSliderSection {
+    height: 400px
     .slider {
       .slider__item {
         padding: 0 15px 0 15px;
       }
 
       &__title {
-        font-size: 35px
+        font-size: 30px
       }
 
       &__subtitle {
@@ -910,12 +1015,54 @@ ul.dropdown:after {
   }
 
   .subHeader {
+    display: none;
+    &.mob_show {
+      display: block;
+      position: fixed;
+      z-index: 5
+      top: 0
+      left: 0
+      width: 100%
+      height: 100%
+      padding: 40px 0 50px 0
+      background: #ffffff
+      overflow: auto
+      border-bottom: none
+      .dropdown li:hover > ul {
+        position: relative;
+      }
+      .nav {
+        flex-direction: column
+        //justify-content: center
 
+        padding-top: 50px
+        padding-bottom: 50px
+        text-align: center
+      }
+      .burger {
+        display: block
+        position: absolute
+        z-index: 10
+        right: 15px
+        top: 70px
+      }
+    }
     .nav {
+      &__item {
+        justify-content: center
+      }
       & > li {
+        justify-content: center
         width: 100%
 
         & > a {
+          justify-content: center
+          &.arrow {
+            &:after {
+              right: 0 !important
+              left: calc(50%+80px)
+            }
+          }
           &.arrow.arrow_down {
             &:after {
               right: 15px
@@ -928,11 +1075,11 @@ ul.dropdown:after {
 
   .feedbackSection {
     .slider {
-      margin: 0 -32px 0 -32px;
+      margin: 0
     }
 
     .slick-arrow {
-      display: none
+      display: none !important
     }
 
     .feedback {
@@ -940,7 +1087,30 @@ ul.dropdown:after {
       &__city,
       &__text {
         padding: 0 32px 0 32px
+
       }
+      &__text {
+        text-align: left
+        align-self: flex-start
+        font-size: 17px
+      }
+    }
+  }
+
+  .contactSection {
+    //margin-bottom: -65px
+  }
+
+  .mapSection {
+    #map_content {
+      height: 400px
+    }
+  }
+
+  .footer {
+    &__copyright {
+      left: 15px
+      right: 15px
     }
   }
 }
@@ -948,23 +1118,19 @@ ul.dropdown:after {
 
 @media (max-width: 630px) {
   .header {
-    &__contact {
-      width: 100%
-      min-width: 100%
-
-      .sz-contact__item {
-        width: 100%
-      }
-    }
   }
 }
 
 @media (max-width: 600px) {
   .header {
-    &__contact {
-      width: 100%
-      min-width: 100%
-      margin: 10px 10px 10px 10px;
+    &__logo {
+      flex-direction: column
+      .sz-logo {
+        &__text {
+          padding: 10px 0 0 0
+          font-size: 18px
+        }
+      }
     }
   }
 
@@ -980,19 +1146,77 @@ ul.dropdown:after {
 }
 
 @media (max-width: 500px) {
+  .header {
+    &__logo {
+      .sz-logo {
+        &__text {
+          font-size: 15px
+        }
+      }
+    }
+    &__contact {
+      width: 200px
+      .sz-contact__item {
+        b {
+          display: none
+        }
+        font-size: 15px
+      }
+    }
+  }
+
   .topSliderSection {
+    height: 300px
     .slider {
       .slider__item {
         padding: 0 15px 0 15px;
       }
 
       &__title {
-        font-size: 30px
+        font-size: 20px
       }
 
       &__subtitle {
+        font-size: 15px
+      }
+      .slick-dots {
+        bottom: 20px
+      }
+    }
+  }
+
+  .feedbackSection {
+    .feedback {
+      &__name,
+      &__city,
+      &__text {
+        padding: 0 25px 0 25px
+
+      }
+      &__text {
         font-size: 16px
       }
     }
   }
 }
+
+@media (max-width: 360px) {
+  .header {
+    &__logo {
+      .sz-logo {
+        &__text {
+          font-size: 13px
+        }
+      }
+    }
+
+    &__contact {
+      width: 200px
+      .sz-contact__item {
+        font-size: 13px
+      }
+    }
+  }
+}
+
+

@@ -10,7 +10,8 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700,800&amp;display=swap">
     <link rel="stylesheet" href="css/common.css">
     <link rel="stylesheet" href="css/product.css">
-    <script src="https://api-maps.yandex.ru/2.1/?apikey=c599d252-3a6f-4b64-872c-a529f6263f40&amp;lang=ru_RU" type="text/javascript"></script>
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=c599d252-3a6f-4b64-872c-a529f6263f40&amp;lang=ru_RU" type="text/javascript"></script><link rel="shortcut icon" href="img/favicon-stroyzakaz.ico" type="image/x-icon">
+<link rel="icon" href="img/favicon-stroyzakaz.ico" type="image/x-icon">
   </head>
   <body>
     <!--if page == 'Главная'-->
@@ -22,7 +23,7 @@
     <!--    header.header.notindexpage-->
     <!--        +header-->
     <header class="header">
-          <div class="container flex_row__between align_center flex_wrap"><a class="header__logo sz-logo" href="index.html"><img class="sz-logo__img" src="img/logo-stroyzakaz.png" alt="Логотип STROY-ZAKAZ"><span class="sz-logo__text">STROY-ZAKAZ</span></a>
+          <div class="container flex_row__between align_center"><a class="header__logo sz-logo" href="index.html"><img class="sz-logo__img" src="img/logo-stroyzakaz.png" alt="Логотип STROY-ZAKAZ"><span class="sz-logo__text">STROY<span class='sz-logo__hyphen'>&#8209</span>ZAKAZ</span></a>
             <ul class="sz-contact text_color_black header__contact">
               <li class="sz-contact__item sz-contact__item_phone"><b>Москва:</b> +7 (861) 217-75-85</li>
               <li class="sz-contact__item sz-contact__item_phone"><b>Москва:</b> +7 (861) 217-75-85</li>
@@ -30,11 +31,13 @@
               <li class="sz-contact__item sz-contact__item_email">info@stroy-zakaz.ru</li>
             </ul>
             <!--button(class="header__call btn btn_transparent text_color_grey" type="button") Меня заменят-->
+            <button class="burger"><i></i></button>
           </div>
     </header>
     <div class="subHeader">
           <div class="container">
-            <ul class="nav dropdown flex_row__around align_center flex_wrap">
+            <button class="burger"><i></i></button>
+            <ul class="nav dropdown active flex_row__around align_center flex_wrap">
               <li class="nav__item"><a class="arrow arrow_down desk" href="index.html#catalogSection">Категории</a><a class="arrow arrow_down mob">Категории</a>
                 <ul>
                   <li><a class="arrow arrow_right" href="">Брус обрезной</a>
@@ -393,7 +396,7 @@
     </div>
     <footer class="footer">
       <div class="container">
-        <div class="footer__firstLine flex_row__between flex_wrap align_center"><a class="footer__logo sz-logo" href="#"><img class="sz-logo__img" src="img/logo-stroyzakaz.png" alt="Логотип STROY-ZAKAZ"><span class="sz-logo__text">STROY-ZAKAZ</span></a><a class="footer__privacyPolicy" href="">Политика конфиденциальности</a><a class="footer__userAgreement" href="">Пользовательское соглашение</a>
+        <div class="footer__firstLine flex_row__between flex_wrap align_center"><a class="footer__logo sz-logo" href="#"><img class="sz-logo__img" src="img/logo-stroyzakaz.png" alt="Логотип STROY-ZAKAZ"><span class="sz-logo__text">STROY&#8209ZAKAZ</span></a><a class="footer__privacyPolicy" href="">Политика конфиденциальности</a><a class="footer__userAgreement" href="">Пользовательское соглашение</a>
           <div class="footer__createdBy createdBy">Разработка сайта <a class="createdBy__link" href="https://rfim.ru/">rfim.ru</a></div>
         </div>
         <div class="footer__copyright">2019 STROY-ZAKAZ.RU ©<br>Все права защищены.</div>
