@@ -31,7 +31,7 @@ html(lang="ru-Ru")
                 .container
                     ul.nav.dropdown.flex_row__around.align_center.flex_wrap
                         li.nav__item
-                            <a class="link-spy arrow arrow_down desk" href="#catalogSection">Категории</a>
+                            a(class=page == 'Главная' ? "link-spy arrow arrow_down desk" : "arrow arrow_down desk" href=page == 'Главная' ? "#catalogSection" : "index.html#catalogSection") Категории
                             <a class="arrow arrow_down mob">Категории</a>
                             ul
                                 li <a class="arrow arrow_right" href="">Брус обрезной</a>
@@ -106,9 +106,9 @@ html(lang="ru-Ru")
                         li.nav__item
                             a(href="") Доставка и оплата
                         li.nav__item
-                            a(class="link-spy" href="#feedbackSection") Отзывы
+                            a(class=page == 'Главная' ? "link-spy":"" href=page == 'Главная' ?"#feedbackSection":"index.html#feedbackSection") Отзывы
                         li.nav__item
-                            a(class="link-spy" href="#contactSection") Контакты
+                            a(class=page == 'Главная' ? "link-spy":"" href=page == 'Главная' ?"#contactSection":"index.html#contactSection") Контакты
 
             //if page == 'Главная'
             //    header.header

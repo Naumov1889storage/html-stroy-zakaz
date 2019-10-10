@@ -31,6 +31,34 @@ $(function () {
     });
 
 
+    // window.onscroll = function () {
+    //     myFunction()
+    // };
+    // var dropdownHeight = $('.productSection__menu li').height();
+    // var dropdown = $('.productSection__menu');
+    // var dropdownOffsetTop = dropdown.offset().top;
+    // var bodyHeight = document.body.offsetHeight;
+    //
+    // function myFunction() {
+    //     var dropdownOffsetTopCurrent = dropdown.offset().top;
+    //     var dropdownLowestPoint = dropdownHeight+dropdownOffsetTopCurrent;
+    //
+    //     console.log("dropdownLowestPoint: " + dropdownLowestPoint);
+    //     console.log("Body height: " + bodyHeight);
+    //     if (window.pageYOffset >= dropdownOffsetTop) {
+    //         if (document.body.offsetHeight-dropdownLowestPoint < 400) {
+    //             dropdown.removeClass("sticky");
+    //             console.log("thisdfdf");
+    //         } else {
+    //             console.log("add class sticky 11");
+    //             dropdown.addClass("sticky");
+    //         }
+    //     } else {
+    //         console.log("remove class sticky 22");
+    //         dropdown.removeClass("sticky");
+    //     }
+    // }
+
     // скрипт отвечающие за карту
     if ($('#map_content').length) {
         ymaps.ready(function (e) {
