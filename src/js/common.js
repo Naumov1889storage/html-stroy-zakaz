@@ -54,30 +54,30 @@ $(function () {
         $('body').toggleClass('active');
     });
 
-    // if ($(window).width() > 900) {
-    //     var productMenu = $('.productSection__menu');
-    //     if (productMenu.length) {
-    //         var productMenuOffsetTopInitial = productMenu.offset().top;
-    //         $(window).scroll(() => {
-    //             topOfFooter = $('.footer').position().top;
-    //             scrollDistanceFromTopOfDoc = $(document).scrollTop() + productMenu.height() + 95;
-    //             scrollDistanceFromTopOfFooter = scrollDistanceFromTopOfDoc - topOfFooter;
-    //
-    //             var windowOffset = window.pageYOffset;
-    //             if (windowOffset + 20 >= productMenuOffsetTopInitial) {// && dropdownOffsetBottom > 400) {
-    //                 productMenu.addClass("sticky");
-    //                 if (scrollDistanceFromTopOfDoc > topOfFooter) {
-    //                     productMenu.css('margin-top', 0 - scrollDistanceFromTopOfFooter);
-    //                 } else {
-    //                     productMenu.css('margin-top', 0);
-    //                 }
-    //             } else {
-    //                 productMenu.removeClass("sticky");
-    //             }
-    //
-    //         });
-    //     }
-    // }
+    if ($(window).width() > 900) {
+        var productMenu = $('.productSection__menu');
+        if (productMenu.length) {
+            var productMenuOffsetTopInitial = productMenu.offset().top;
+            $(window).scroll(() => {
+                topOfFooter = $('.footer').position().top;
+                scrollDistanceFromTopOfDoc = $(document).scrollTop() + productMenu.height() + 95;
+                scrollDistanceFromTopOfFooter = scrollDistanceFromTopOfDoc - topOfFooter;
+
+                var windowOffset = window.pageYOffset;
+                if (windowOffset + 20 >= productMenuOffsetTopInitial) {// && dropdownOffsetBottom > 400) {
+                    productMenu.addClass("sticky");
+                    if (scrollDistanceFromTopOfDoc > topOfFooter) {
+                        productMenu.css('margin-top', 0 - scrollDistanceFromTopOfFooter);
+                    } else {
+                        productMenu.css('margin-top', 0);
+                    }
+                } else {
+                    productMenu.removeClass("sticky");
+                }
+
+            });
+        }
+    }
 
 
 
