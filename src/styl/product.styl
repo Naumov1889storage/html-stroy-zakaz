@@ -8,8 +8,21 @@ WHITE = #fffff
 .productSection {
   margin: 80px 0 55px 0
 
-  &__menu {
+  .container {
     position: relative;
+    flex-direction column
+  }
+  &__menu {
+    position: absolute;
+    top: 0
+    //align-self: flex-start
+    //left: 30px
+
+    &.sticky {
+      position: fixed
+      top: 20px
+      //left: 45px
+    }
 
     & > li > ul > li:first-child > span,
     & > li > span {
@@ -37,9 +50,9 @@ WHITE = #fffff
   }
 
   &__product {
-    margin-left: 30px
+    margin-left: 330px
     max-width: 730px
-    width: 100%
+    //width: 100%
 
     .title {
       margin-top: 0
@@ -183,7 +196,7 @@ WHITE = #fffff
     }
 
     &__product {
-      margin: 40px auto 0 auto
+      margin: 120px auto 0 auto
       width: 100%
     }
   }

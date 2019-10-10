@@ -15,10 +15,6 @@
 body.active {
   position: fixed;
 }
-.sticky {
-  position: fixed !important;
-  top: 0;
-}
 .btn {
   min-height: 58px;
   text-transform: uppercase;
@@ -596,7 +592,6 @@ ul.dropdown:after {
   bottom: 30px;
   left: 30px;
   right: 30px;
-  width: 100%;
   color: #323232;
   font-family: Montserrat;
   font-size: 14px;
@@ -748,9 +743,8 @@ ul.dropdown:after {
   }
   .subHeader.mob_show .nav {
     flex-direction: column;
-    padding-top: 50px;
-    padding-bottom: 50px;
     text-align: center;
+    padding-bottom: 50px;
   }
   .subHeader.mob_show .burger {
     display: block;
@@ -758,6 +752,9 @@ ul.dropdown:after {
     z-index: 10;
     right: 15px;
     top: 70px;
+  }
+  .subHeader.mob_show .container {
+    padding: 50px 25px 0 25px;
   }
   .subHeader .nav__item {
     justify-content: center;
@@ -862,4 +859,11 @@ ul.dropdown:after {
   .header__contact .sz-contact__item {
     font-size: 13px;
   }
+}
+.deliverySection {
+  margin-bottom: 90px;
+}
+.deliverySection__title {
+  margin-top: 80px;
+  margin-bottom: 60px;
 }

@@ -45,25 +45,6 @@ $(function () {
 
         $('.dropdown .arrow.mob').click(function (e) {
             $(this).next().toggleClass('active');
-
-            // var area = e.target;
-            //
-            // //get all parents
-            // var areaArray = [];
-            // while (area) {
-            //     areaArray.unshift(area);
-            //     area = area.parentElement;
-            // };
-            //
-            // //check if some of parents have class 'block'
-            // var bool = areaArray.some(function(num) {
-            //     return num.className == 'dropdown'
-            // });
-            //
-            // if (!bool) {
-            //     console.log('dfgdfg');
-            //     document.querySelector('ul').classList.remove('active')
-            // }
         });
     }
 
@@ -71,46 +52,35 @@ $(function () {
         $('.burger').toggleClass('burger_active');
         $('.subHeader').toggleClass('mob_show');
         $('body').toggleClass('active');
-        // $('.header .top').toggleClass('top_active');
-        // $('.overlay').fadeToggle(300);
     });
-    // $('.subHeader .burger').click(function () {
-    //     $(this).removeClass('burger_active');
-    //     $('.subHeader').removeClass('mob_show');
-    //     $('body').removeClass('active');
-    //     // $('.header .top').toggleClass('top_active');
-    //     // $('.overlay').fadeToggle(300);
-    // });
 
-
-
-    // window.onscroll = function () {
-    //     myFunction()
-    // };
-    // var dropdownHeight = $('.productSection__menu li').height();
-    // var dropdown = $('.productSection__menu');
-    // var dropdownOffsetTop = dropdown.offset().top;
-    // var bodyHeight = document.body.offsetHeight;
+    // if ($(window).width() > 900) {
+    //     var productMenu = $('.productSection__menu');
+    //     if (productMenu.length) {
+    //         var productMenuOffsetTopInitial = productMenu.offset().top;
+    //         $(window).scroll(() => {
+    //             topOfFooter = $('.footer').position().top;
+    //             scrollDistanceFromTopOfDoc = $(document).scrollTop() + productMenu.height() + 95;
+    //             scrollDistanceFromTopOfFooter = scrollDistanceFromTopOfDoc - topOfFooter;
     //
-    // function myFunction() {
-    //     var dropdownOffsetTopCurrent = dropdown.offset().top;
-    //     var dropdownLowestPoint = dropdownHeight+dropdownOffsetTopCurrent;
+    //             var windowOffset = window.pageYOffset;
+    //             if (windowOffset + 20 >= productMenuOffsetTopInitial) {// && dropdownOffsetBottom > 400) {
+    //                 productMenu.addClass("sticky");
+    //                 if (scrollDistanceFromTopOfDoc > topOfFooter) {
+    //                     productMenu.css('margin-top', 0 - scrollDistanceFromTopOfFooter);
+    //                 } else {
+    //                     productMenu.css('margin-top', 0);
+    //                 }
+    //             } else {
+    //                 productMenu.removeClass("sticky");
+    //             }
     //
-    //     console.log("dropdownLowestPoint: " + dropdownLowestPoint);
-    //     console.log("Body height: " + bodyHeight);
-    //     if (window.pageYOffset >= dropdownOffsetTop) {
-    //         if (document.body.offsetHeight-dropdownLowestPoint < 400) {
-    //             dropdown.removeClass("sticky");
-    //             console.log("thisdfdf");
-    //         } else {
-    //             console.log("add class sticky 11");
-    //             dropdown.addClass("sticky");
-    //         }
-    //     } else {
-    //         console.log("remove class sticky 22");
-    //         dropdown.removeClass("sticky");
+    //         });
     //     }
     // }
+
+
+
 
     // скрипт отвечающие за карту
     if ($('#map_content').length) {

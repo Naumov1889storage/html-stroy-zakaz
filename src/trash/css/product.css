@@ -1,8 +1,17 @@
 .productSection {
   margin: 80px 0 55px 0;
 }
-.productSection__menu {
+.productSection .container {
   position: relative;
+  flex-direction: column;
+}
+.productSection__menu {
+  position: absolute;
+  top: 0;
+}
+.productSection__menu.sticky {
+  position: fixed;
+  top: 20px;
 }
 .productSection__menu > li > ul > li:first-child > span,
 .productSection__menu > li > span {
@@ -26,9 +35,8 @@
   flex-direction: column;
 }
 .productSection__product {
-  margin-left: 30px;
+  margin-left: 330px;
   max-width: 730px;
-  width: 100%;
 }
 .productSection__product .title {
   margin-top: 0;
@@ -133,7 +141,7 @@
     right: 20px;
   }
   .productSection__product {
-    margin: 40px auto 0 auto;
+    margin: 120px auto 0 auto;
     width: 100%;
   }
 }
