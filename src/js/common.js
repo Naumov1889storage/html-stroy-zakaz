@@ -40,9 +40,30 @@ $(function () {
 
     });
 
+    if ($('.productSection .table').hasClass('table_big')) {
+        $('.productSection').addClass('earlyMob');
+
+        $('.dropdown .arrow.mob').click(function (e) {
+            $(this).next().toggleClass('active');
+        });
+        $(document).click(function(e) {
+            var area = $(e.target).parents().addBack();
+            if (!(area.is('.dropdown'))) {
+                $('.dropdown .arrow').next().removeClass('active');
+            }
+        });
+
+        $('.burger').click(function () {
+            $('.burger').toggleClass('burger_active');
+            $('.subHeader').toggleClass('mob_show');
+            $('body').toggleClass('active');
+        });
+    }
 
 
-    if ($(window).width() < 900) {
+    console.log(($('.productSection.earlyMob').length));
+
+    if (($(window).width() < 900) && !($('.productSection.earlyMob').length)) {
         $(document).click(function(e) {
             var area = $(e.target).parents().addBack();
             if (!(area.is('.dropdown'))) {
@@ -62,7 +83,7 @@ $(function () {
     }
 
 
-    if ($(window).width() > 900 && !($('productSection.earlyMob').length)) {
+    if (($(window).width() > 900) && !($('.productSection.earlyMob').length)) {
         var productMenu = $('.productSection__menu');
         if (productMenu.length) {
             var productMenuOffsetTopInitial = productMenu.offset().top;
@@ -85,20 +106,6 @@ $(function () {
 
             });
         }
-    }
-
-    if ($('.productSection .table').hasClass('table_big')) {
-        $('.productSection').addClass('earlyMob');
-
-        $('.dropdown .arrow.mob').click(function (e) {
-            $(this).next().toggleClass('active');
-        });
-        $(document).click(function(e) {
-            var area = $(e.target).parents().addBack();
-            if (!(area.is('.dropdown'))) {
-                $('.dropdown .arrow').next().removeClass('active');
-            }
-        });
     }
 
     // скрипт отвечающие за карту
