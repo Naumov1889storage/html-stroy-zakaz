@@ -1,0 +1,83 @@
+extends layout
+
+block append title
+    -page = 'Карточка товара'
+
+block content
+    .productSection
+        .container.flex_row__end.align_start
+            ul.productSection__menu.dropdown
+                li <span class="mob arrow arrow_down">Категории</span>
+                    ul
+                        li <span class="desk">Категории</span>
+                        li <a class="arrow arrow_right" href="">Брус обрезной</a>
+                            ul
+                                li <a href="">Брус обрезной ГОСТ</a>
+                                li <a href="">Брус обрезной ТУ</a>
+                        li <a class="arrow arrow_right" href="">Брус профилированный</a>
+                            ul
+                                li <a href="">Брус профилированный</a>
+                                li <a href="">Брус сухой профилированный</a>
+                        li <a class="arrow arrow_right" href="">Брус строганный</a>
+                            ul
+                                li <a href="">Брус строганный</a>
+                                li <a href="">Брус сухой строганный</a>
+                        li <a class="arrow arrow_right" href="">Брусок</a>
+                            ul
+                                li <a href="">Брусок обрезной</a>
+                                li <a href="">Брусок строганный</a>
+                        li <a class="arrow arrow_right" href="">Доска обрезная</a>
+                            ul
+                                li <a href="">Брус и доска обрезная осина</a>
+                                li <a href="">Доска обрезная</a>
+                                li <a href="">Доска обрезная 2 сорт ГОСТ</a>
+                                li <a href="">Доска обрезная 2 сорт ТУ</a>
+                                li <a href="">Доска обрезная ГОСТ</a>
+                        li <a class="arrow arrow_right" href="">Доска половая</a>
+                            ul
+                                li <a href="">Доска половая</a>
+                                li <a href="">Доска сухая половая</a>
+                        li <a class="arrow arrow_right" href="">Доска строганная</a>
+                            ul
+                                li <a href="">Доска строганная</a>
+                                li <a href="">Доска сухая строганная</a>
+                        li <a class="arrow arrow_right" href="">Вагонка</a>
+                            ul
+                                li <a href="">Вагонка</a>
+                                li <a href="">Вагонка сухая</a>
+                                li <a href="">Евровагонка</a>
+                        li <a class="arrow arrow_right" href="">Фанера ФК</a>
+                            ul
+                                li <a href="">Сорт 3/4</a>
+                                li <a href="">Сорт 4/4</a>
+                                li <a href="">Фанера строительный</a>
+                        li <a class="arrow arrow_right" href="">Фанера ФСФ</a>
+                            ul
+                                li <a href="">1220*2440 3/3</a>
+                                li <a href="">1220х2440 3/4</a>
+                                li <a href="">1220*2440 4/4</a>
+                                li <a href="">1500*3000 4/4</a>
+                        li <a class="arrow arrow_right" href="">Фанера ламинированная</a>
+                            ul
+                                li <a href="">1220х2440</a>
+                                li <a href="">1500х3000</a>
+                        li <a class="arrow arrow_right" href="">OSB Плита</a>
+                            ul
+                                li <a href="">OSB-3</a>
+                        li <a class="" href="">Блок Хаус</a>
+                        li <a class="arrow arrow_right" href="">Имитация бруса</a>
+                            ul
+                                li <a href="">Имитация бруса класс А</a>
+                                li <a href="">Имитация бруса класс АВ</a>
+                                li <a href="">Имитация бруса класс В</a>
+                                li <a href="">Имитация бруса класс С</a>
+                        li <a class="arrow arrow_right" href="">Утеплитель</a>
+                            ul
+                                li <a href="">Утеплитель ROCKWOOL</a>
+                                li <a href="">Утеплитель URSA GEO</a>
+                                li <a href="">Утеплитель IZOBEL</a>
+                                li <a href="">Утеплитель IZOVOL</a>
+                                li <a href="">Утеплитель ISOROC</a>
+
+            .productSection__product.product
+                block product

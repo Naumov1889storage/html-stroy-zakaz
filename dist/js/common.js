@@ -18,7 +18,13 @@ $(function () {
     linkSpy.click(function (e) {
         e.preventDefault();
 
-        var currentLink = $(this)
+        if ($(e.target).parents().addBack().is('.subHeader.mob_show')) {
+            $('body').toggleClass('active');
+            $('.burger').toggleClass('burger_active');
+            $('.subHeader').toggleClass('mob_show');
+        }
+
+        var currentLink = $(this);
         var href = currentLink.attr('href');
         var scrollTo = $(href);
         var offsetTop = scrollTo.offset().top;
@@ -35,6 +41,7 @@ $(function () {
     });
 
 
+
     if ($(window).width() < 900) {
         $(document).click(function(e) {
             var area = $(e.target).parents().addBack();
@@ -46,13 +53,15 @@ $(function () {
         $('.dropdown .arrow.mob').click(function (e) {
             $(this).next().toggleClass('active');
         });
+
+        $('.burger').click(function () {
+            $('.burger').toggleClass('burger_active');
+            $('.subHeader').toggleClass('mob_show');
+            $('body').toggleClass('active');
+        });
     }
 
-    $('.burger').click(function () {
-        $('.burger').toggleClass('burger_active');
-        $('.subHeader').toggleClass('mob_show');
-        $('body').toggleClass('active');
-    });
+
 
     if ($(window).width() > 900) {
         var productMenu = $('.productSection__menu');
