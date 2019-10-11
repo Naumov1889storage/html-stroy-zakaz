@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="ru-Ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1.0, width=device-width">
+    <title>STROY-ZAKAZ - Доставка и оплата</title>
+    <link rel="stylesheet" href="css/concat-css-libs.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700,800&amp;display=swap">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/product.css">
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=c599d252-3a6f-4b64-872c-a529f6263f40&amp;lang=ru_RU" type="text/javascript"></script><link rel="shortcut icon" href="img/favicon-stroyzakaz.ico" type="image/x-icon">
+<link rel="icon" href="img/favicon-stroyzakaz.ico" type="image/x-icon">
+  </head>
+  <body>
+    <!--if page == 'Главная'-->
+    <!--    header.header-->
+    <!--        +header-->
+    <!--    .subHeader-->
+    <!--        +subHeader-->
+    <!--else if page != 'Главная'-->
+    <!--    header.header.notindexpage-->
+    <!--        +header-->
+    <header class="header">
+          <div class="container flex_row__between align_center"><a class="header__logo sz-logo" href="index.html"><img class="sz-logo__img" src="img/logo-stroyzakaz.png" alt="Логотип STROY-ZAKAZ"><span class="sz-logo__text">STROY<span class='sz-logo__hyphen'>&#8209</span>ZAKAZ</span></a>
+            <ul class="sz-contact text_color_black header__contact">
+              <li class="sz-contact__item sz-contact__item_phone"><b>Москва:</b> +7 (499) 350 37 04</li>
+              <li class="sz-contact__item sz-contact__item_phone"><b>Санкт-Петербург:</b> +7 (812) 309 42 95</li>
+              <li class="sz-contact__item sz-contact__item_phone"><b>Краснодар:</b> +7 (861) 203 51 48</li>
+              <li class="sz-contact__item sz-contact__item_email">stroyzakaz01@mail.ru</li>
+            </ul>
+            <!--button(class="header__call btn btn_transparent text_color_grey" type="button") Меня заменят-->
+            <button class="burger"><i></i></button>
+          </div>
+    </header>
+    <div class="subHeader">
+          <div class="container">
+            <button class="burger"><i></i></button>
+            <ul class="nav dropdown flex_row__around align_center flex_wrap">
+              <li class="nav__item"><a class="arrow arrow_down desk" href="index.html#catalogSection">Категории</a><a class="arrow arrow_down mob">Категории</a>
+                <ul>
+                  <li><a class="arrow arrow_right" href="brus-obreznoi.html">Брус обрезной</a>
+                    <ul>
+                      <li><a href="brus-obreznoi.html#brus-obreznoi-gost">Брус обрезной ГОСТ</a></li>
+                      <li><a href="brus-obreznoi.html#brus-obreznoi-ty">Брус обрезной ТУ</a></li>
+                    </ul>
+                  </li>
+                  <li><a class="arrow arrow_right" href="brus-profilirovannyy.html">Брус профилированный</a>
+                    <ul>
+                      <li><a href="brus-profilirovannyy.html#brus-profilirovannyy">Брус профилированный</a></li>
+                      <li><a href="brus-profilirovannyy.html#brus-suhoj-profilirovannyy">Брус сухой профилированный</a></li>
+                    </ul>
+                  </li>
+                  <li><a class="arrow arrow_right" href="brus-stroganyy.html">Брус строганный</a>
+                    <ul>
+                      <li><a href="brus-stroganyy.html#brus-stroganyy">Брус строганный</a></li>
+                      <li><a href="brus-stroganyy.html#brus-suhoj-stroganyy">Брус сухой строганный</a></li>
+                    </ul>
+                  </li>
+                  <li><a class="arrow arrow_right" href="brusok.html">Брусок</a>
+                    <ul>
+                      <li><a href="brusok.html#brusok-obreznoj">Брусок обрезной</a></li>
+                      <li><a href="brusok.html#brusok-strogannyj">Брусок строганный</a></li>
+                    </ul>
+                  </li>
+                  <li><a class="arrow arrow_right" href="doska-obreznaya.html">Доска обрезная</a>
+                    <ul>
+                      <li><a href="doska-obreznaya.html#doska-obreznaya">Доска обрезная</a></li>
+                      <li><a href="doska-obreznaya.html#doska-obreznaya-osina">Доска обрезная осина</a></li>
+                      <li><a href="doska-obreznaya.html#doska-obreznaya-2-j-sort">Доска обрезная 2-й сорт</a></li>
+                    </ul>
+                  </li>
+                  <li><a class="arrow arrow_right" href="doska-polovaya.html">Доска половая</a>
+                    <ul>
+                      <li><a href="doska-polovaya.html#doska-polovaya">Доска половая</a></li>
+                      <li><a href="doska-polovaya.html#doska-suhaya-polovaya">Доска сухая половая</a></li>
+                    </ul>
+                  </li>
+                  <li><a class="arrow arrow_right" href="doska-strogannay.html">Доска строганная</a>
+                    <ul>
+                      <li><a href="doska-strogannay.html#">Доска строганная</a></li>
+                      <li><a href="doska-strogannay.html#">Доска сухая строганная</a></li>
+                    </ul>
+                  </li>
+                  <li><a class="arrow arrow_right" href="vagonka.html">Вагонка</a>
+                    <ul>
+                      <li><a href="vagonka.html#vagonka">Вагонка</a></li>
+                      <li><a href="vagonka.html#vagonka-suhaya">Вагонка сухая</a></li>
+                      <li><a href="vagonka.html#evrovagonka">Евровагонка</a></li>
+                    </ul>
+                  </li>
+                  <li><a class="arrow arrow_right" href="fanera-fk.html">Фанера ФК</a>
+                    <ul>
+                      <li><a href="fanera-fk.html#fanera-fk-sort-3-4">Фанера ФК сорт 3/4</a></li>
+                      <li><a href="fanera-fk.html#fanera-fk-sort-4-4">Фанера ФК сорт 4/4</a></li>
+                      <li><a href="fanera-fk.html#fanera-fk-stroitelnaya">Фанера строительная</a></li>
+                    </ul>
+                  </li>
+                  <li><a class="arrow arrow_right" href="fanera-fsf.html">Фанера ФСФ</a>
+                    <ul>
+                      <li><a href="fanera-fsf.html#fanera-fsf-1220-2440-3-3">1220*2440 3/3</a></li>
+                      <li><a href="fanera-fsf.html#fanera-fsf-1220-2440-3-4">1220х2440 3/4</a></li>
+                      <li><a href="fanera-fsf.html#fanera-fsf-1220-2440-4-4">1220*2440 4/4</a></li>
+                      <li><a href="fanera-fsf.html#fanera-fsf-1500-3000-4-4">1500*3000 4/4</a></li>
+                    </ul>
+                  </li>
+                  <li><a class="arrow arrow_right" href="fanera-laminirovannaya.html">Фанера ламинированная</a>
+                    <ul>
+                      <li><a href="fanera-laminirovannaya.html#fanera-laminirovannaya-1220h2440-kitaj">1220х2440 Китай</a></li>
+                      <li><a href="fanera-laminirovannaya.html#fanera-laminirovannaya-1220h2440-rossiya">1220х2440 Россия</a></li>
+                      <li><a href="fanera-laminirovannaya.html#fanera-laminirovannaya-1500h3000">1500х3000</a></li>
+                    </ul>
+                  </li>
+                  <li><a class="" href="osb-3-plita.html">OSB-3 Плита</a></li>
+                  <li><a class="" href="blok-haus.html">Блок Хаус</a></li>
+                  <li><a class="arrow arrow_right" href="imitaciya-brusa.html">Имитация бруса</a>
+                    <ul>
+                      <li><a href="imitaciya-brusa.html#imitaciya-brusa-klass-a">класс А</a></li>
+                      <li><a href="imitaciya-brusa.html#imitaciya-brusa-klass-ab">класс АВ</a></li>
+                      <li><a href="imitaciya-brusa.html#imitaciya-brusa-klass-b">класс В</a></li>
+                      <li><a href="imitaciya-brusa.html#imitaciya-brusa-klass-c">класс С</a></li>
+                    </ul>
+                  </li>
+                  <li><a class="arrow arrow_right" href="parketnaya-doska.html">Паркетная доска</a>
+                    <ul>
+                      <li><a href="parketnaya-doska.html#parketnaya-doska-iz-massiva-listvennicy">из массива лиственницы</a></li>
+                      <li><a href="parketnaya-doska.html#parketnaya-doska-iz-listvennicy-avangard">из лиственницы "АВАНГАРД"</a></li>
+                    </ul>
+                  </li>
+                  <li><a class="arrow arrow_right" href="terrasnaya-doska.html">Террасная доска</a>
+                    <ul>
+                      <li><a href="terrasnaya-doska.html#terrasnaya-doska-iz-listvennicy-velvet">вельвет</a></li>
+                      <li><a href="terrasnaya-doska.html#terrasnaya-doska-iz-listvennicy-gladkaya">гладкая</a></li>
+                    </ul>
+                  </li>
+                  <li><a class="" href="pellety.html">Пеллеты</a></li>
+                  <li><a class="" href="brikety.html">Брикеты</a></li>
+                  <li><a class="arrow arrow_right" href="uteplitel.html">Утеплитель</a>
+                    <ul>
+                      <li><a href="uteplitel.html#uteplitel-rockwool">Утеплитель ROCKWOOL</a></li>
+                      <li><a href="uteplitel.html#uteplitel-ursa-geo">Утеплитель URSA GEO</a></li>
+                      <li><a href="uteplitel.html#uteplitel-izobel">Утеплитель IZOBEL</a></li>
+                      <li><a href="uteplitel.html#uteplitel-izovol">Утеплитель IZOVOL</a></li>
+                      <li><a href="uteplitel.html#uteplitel-isoroc">Утеплитель ISOROC</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+              <li class="nav__item"><a href="delivery.html">Доставка и оплата</a></li>
+              <li class="nav__item"><a href="index.html#feedbackSection">Отзывы</a></li>
+              <li class="nav__item"><a href="index.html#contactSection">Контакты</a></li>
+            </ul>
+          </div>
+    </div>
+    <div class="topSliderSection">
+      <div class="slider slider_wide text_color_white text_pos_center">
+        <div class="slider__item"><img class="slider__img" src="img/picture-slider-1.jpg">
+          <div class="slider__overlay"></div>
+          <div class="slider__title">Купите 20 тонн пеллет и получите скидку 5%</div>
+          <!--.slider__subtitle Наше дерево экологичекски чистое и правильно выращенное, поэтому наши пиломатериалы лучше чем у конкурентов-->
+        </div>
+        <div class="slider__item"><img class="slider__img" src="img/picture-slider-1.jpg">
+          <div class="slider__overlay"></div>
+          <div class="slider__title">При заказе от 10 кубов бруса или доски получаете скидку 10%</div>
+          <!--.slider__subtitle Наше дерево экологичекски чистое и правильно выращенное, поэтому наши пиломатериалы лучше чем у конкурентов-->
+        </div>
+        <div class="slider__item"><img class="slider__img" src="img/picture-slider-1.jpg">
+          <div class="slider__overlay"></div>
+          <div class="slider__title">Покупайте 500 кв м любой вагонки и получайте 7% скидки</div>
+          <!--.slider__subtitle Наше дерево экологичекски чистое и правильно выращенное, поэтому наши пиломатериалы лучше чем у конкурентов-->
+        </div>
+      </div>
+    </div>
+    <div class="confidentialitySection">
+      <div class="container">
+        <div class="confidentialitySection__title title title_h2">
+          <div class="title__line"></div>
+          <div class="title__text">ПОЛИТИКА КОНФИДЕНЦИАЛЬНОСТИ</div>
+          <div class="title__line"></div>
+        </div>
+        <div class="article__p">Настоящая Политика конфиденциальности персональных данных (далее – Политика конфиденциальности) действует в отношении всей информации, которую данный сайт, на котором размещен текст этой Политики конфиденциальности, может получить о Пользователе, а также любых программ и продуктов, размещенных на нем. ОПРЕДЕЛЕНИЕ ТЕРМИНОВ</div>
+        <div class="article__title text_pos_center">ОПРЕДЕЛЕНИЕ ТЕРМИНОВ</div>
+        <div class="article__p">1.1 В настоящей Политике конфиденциальности используются следующие термины:</div>
+        <div class="article__p">1.1.1. «Администрация сайта» – уполномоченные сотрудники на управления сайтом, действующие от его имени, которые организуют и (или) осуществляет обработку персональных данных, а также определяет цели обработки персональных данных, состав персональных данных, подлежащих обработке, действия (операции), совершаемые с персональными данными.</div>
+        <div class="article__p">1.1.2. «Персональные данные» - любая информация, относящаяся к прямо или косвенно определенному или определяемому физическому лицу (субъекту персональных данных).</div>
+        <div class="article__p">1.1.3. «Обработка персональных данных» - любое действие (операция) или совокупность действий (операций), совершаемых с использованием средств автоматизации или без использования таких средств с персональными данными, включая сбор, запись, систематизацию, накопление, хранение, уточнение (обновление, изменение), извлечение, использование, передачу (распространение, предоставление, доступ), обезличивание, блокирование, удаление, уничтожение персональных данных.</div>
+        <div class="article__p">1.1.4. «Конфиденциальность персональных данных» - обязательное для соблюдения Администрацией сайта требование не допускать их умышленного распространения без согласия субъекта персональных данных или наличия иного законного основания.</div>
+        <div class="article__p">1.1.5. «Пользователь сайта (далее Пользователь)» – лицо, имеющее доступ к сайту, посредством сети Интернет и использующее данный сайт для своих целей.</div>
+        <div class="article__p">1.1.6. «Cookies» — небольшой фрагмент данных, отправленный веб-сервером и хранимый на компьютере пользователя, который веб-клиент или веб-браузер каждый раз пересылает веб-серверу в HTTP-запросе при попытке открыть страницу соответствующего сайта.</div>
+        <div class="article__p">1.1.7. «IP-адрес» — уникальный сетевой адрес узла в компьютерной сети, построенной по протоколу IP.</div>
+        <div class="article__p"></div>
+        <div class="article__p"></div>
+        <div class="article__p"></div>
+        <div class="article__title text_pos_center">ОБЩИЕ ПОЛОЖЕНИЯ</div>
+        <div class="article__p">2.1. Использование Пользователем сайта означает согласие с настоящей Политикой конфиденциальности и условиями обработки персональных данных Пользователя.</div>
+        <div class="article__p">2.2. В случае несогласия с условиями Политики конфиденциальности Пользователь должен прекратить использование сайта.</div>
+        <div class="article__p">2.3.Настоящая Политика конфиденциальности применяется только к данному сайту. Администрация сайта не контролирует и не несет ответственность за сайты третьих лиц, на которые Пользователь может перейти по ссылкам, доступным на данном сайте.</div>
+        <div class="article__p">2.4. Администрация сайта не проверяет достоверность персональных данных, предоставляемых Пользователем сайта.</div>
+        <div class="article__title text_pos_center">ПРЕДМЕТ ПОЛИТИКИ КОНФИДЕНЦИАЛЬНОСТИ</div>
+        <div class="article__p">3.1. Настоящая Политика конфиденциальности устанавливает обязательства Администрации сайта по умышленному неразглашению персональных данных, которые Пользователь предоставляет по разнообразным запросам Администрации сайта (например, при регистрации на сайте, оформлении заказа, подписки на уведомления и т.п).</div>
+        <div class="article__p">3.2. Персональные данные, разрешённые к обработке в рамках настоящей Политики конфиденциальности, предоставляются Пользователем путём заполнения специальных форм на Сайте и обычно включают в себя следующую информацию:</div>
+        <div class="article__p">3.2.1. фамилию, имя, отчество Пользователя;</div>
+        <div class="article__p">3.2.2. контактный телефон Пользователя;</div>
+        <div class="article__p">3.2.3. адрес электронной почты (e-mail);</div>
+        <div class="article__p">3.2.4. место жительство Пользователя и другие данные.</div>
+        <div class="article__p">3.3. Администрация сайта также принимает усилия по защите Персональных данных, которые автоматически передаются в процессе посещения страниц сайта:<br>IP адрес;<br>информация из cookies;<br>информация о браузере (или иной программе, которая осуществляет доступ к сайту);<br>время доступа;<br>посещенные адреса страниц;<br>реферер (адрес предыдущей страницы) и т.п.</div>
+        <div class="article__p">3.3.1. Отключение cookies может повлечь невозможность доступа к сайту.</div>
+        <div class="article__p">3.3.2. Сайт осуществляет сбор статистики об IP-адресах своих посетителей. Данная информация используется с целью выявления и решения технических проблем, для контроля корректности проводимых операций.</div>
+        <div class="article__p">3.4. Любая иная персональная информация неоговоренная выше (история покупок, используемые браузеры и операционные системы и т.д.) не подлежит умышленному разглашению, за исключением случаев, предусмотренных в п.п. 5.2. и 5.3. настоящей Политики конфиденциальности.</div>
+        <div class="article__title text_pos_center">ЦЕЛИ СБОРА ПЕРСОНАЛЬНОЙ ИНФОРМАЦИИ ПОЛЬЗОВАТЕЛЯ</div>
+        <div class="article__p">4.1. Персональные данные Пользователя Администрация сайта может использовать в целях:</div>
+        <div class="article__p">4.1.1. Идентификации Пользователя, зарегистрированного на сайте, для оформления заказа и (или) заключения Договора.</div>
+        <div class="article__p">4.1.2. Предоставления Пользователю доступа к персонализированным ресурсам сайта.</div>
+        <div class="article__p">4.1.3. Установления с Пользователем обратной связи, включая направление уведомлений, запросов, касающихся использования сайта, оказания услуг, обработка запросов и заявок от Пользователя.</div>
+        <div class="article__p">4.1.4. Определения места нахождения Пользователя для обеспечения безопасности, предотвращения мошенничества.</div>
+        <div class="article__p">4.1.5. Подтверждения достоверности и полноты персональных данных, предоставленных Пользователем.</div>
+        <div class="article__p">4.1.6. Создания учетной записи для совершения покупок, если Пользователь дал согласие на создание учетной записи.</div>
+        <div class="article__p">4.1.7. Уведомления Пользователя сайта о состоянии Заказа.</div>
+        <div class="article__p">4.1.8. Обработки и получения платежей, подтверждения налога или налоговых льгот, оспаривания платежа, определения права на получение кредитной линии Пользователем.</div>
+        <div class="article__p">4.1.9. Предоставления Пользователю эффективной клиентской и технической поддержки при возникновении проблем связанных с использованием сайта.</div>
+        <div class="article__p">4.1.10. Предоставления Пользователю с его согласия, обновлений продукции, специальных предложений, информации о ценах, новостной рассылки и иных сведений от имени сайта или от имени партнеров сайта.</div>
+        <div class="article__p">4.1.11. Осуществления рекламной деятельности с согласия Пользователя.</div>
+        <div class="article__p">4.1.12. Предоставления доступа Пользователю на сторонние сайты или сервисы партнеров данного сайта с целью получения их предложений, обновлений или услуг.</div>
+        <div class="article__title text_pos_center">СПОСОБЫ И СРОКИ ОБРАБОТКИ ПЕРСОНАЛЬНОЙ ИНФОРМАЦИИ</div>
+        <div class="article__p">5.1. Обработка персональных данных Пользователя осуществляется без ограничения срока, любым законным способом, в том числе в информационных системах персональных данных с использованием средств автоматизации или без использования таких средств.</div>
+        <div class="article__p">5.2. Пользователь соглашается с тем, что Администрация сайта вправе передавать персональные данные третьим лицам, в частности, курьерским службам, организациями почтовой связи, операторам электросвязи, исключительно в целях выполнения заявок Пользователя, оформленных на сайте, в рамках Договора публичной оферты.</div>
+        <div class="article__p">5.3. Персональные данные Пользователя могут быть переданы уполномоченным органам государственной власти только по основаниям и в порядке, установленным действующим законодательством.</div>
+        <div class="article__title text_pos_center">ОБЯЗАТЕЛЬСТВА СТОРОН</div>
+        <div class="article__p">6.1. Пользователь обязуется:</div>
+        <div class="article__p">6.1.1. Предоставить корректную и правдивую информацию о персональных данных, необходимую для пользования сайтом.</div>
+        <div class="article__p">6.1.2. Обновить или дополнить предоставленную информацию о персональных данных в случае изменения данной информации.</div>
+        <div class="article__p">6.1.3. Принимать меры для защиты доступа к своим конфиденциальным данным, хранящимся на сайте.</div>
+        <div class="article__p">6.2. Администрация сайта обязуется:</div>
+        <div class="article__p">6.2.1. Использовать полученную информацию исключительно для целей, указанных в п. 4 настоящей Политики конфиденциальности.</div>
+        <div class="article__p">6.2.2. Не разглашать персональных данных Пользователя, за исключением п.п. 5.2. и 5.3. настоящей Политики Конфиденциальности.</div>
+        <div class="article__p">6.2.3. Осуществить блокирование персональных данных, относящихся к соответствующему Пользователю, с момента обращения или запроса Пользователя или его законного представителя либо уполномоченного органа по защите прав субъектов персональных данных на период проверки, в случае выявления недостоверных персональных данных или неправомерных действий.</div>
+        <div class="article__title text_pos_center">ОТВЕТСТВЕННОСТЬ СТОРОН</div>
+        <div class="article__p">7.1. Администрация сайта несёт ответственность за умышленное разглашение Персональных данных Пользователя в соответствии с действующим законодательством, за исключением случаев, предусмотренных п.п. 5.2., 5.3. и 7.2. настоящей Политики Конфиденциальности.</div>
+        <div class="article__p">7.2. В случае утраты или разглашения Персональных данных Администрация сайта не несёт ответственность, если данная конфиденциальная информация:</div>
+        <div class="article__p">7.2.1. Стала публичным достоянием до её утраты или разглашения.</div>
+        <div class="article__p">7.2.2. Была получена от третьей стороны до момента её получения Администрацией сайта.</div>
+        <div class="article__p">7.2.3. Была получена третьими лицами путем несанкционированного доступа к файлам сайта.</div>
+        <div class="article__p">7.2.4. Была разглашена с согласия Пользователя.</div>
+        <div class="article__p">7.3. Пользователь несет ответственность за правомерность, корректность и правдивость предоставленной Персональных данных в соответствии с действующим законодательством.</div>
+        <div class="article__title text_pos_center">РАЗРЕШЕНИЕ СПОРОВ</div>
+        <div class="article__p">8.1. До обращения в суд с иском по спорам, возникающим из отношений между Пользователем сайта и Администрацией сайта, обязательным является предъявление претензии (письменного предложения о добровольном урегулировании спора).</div>
+        <div class="article__p">8.2 .Получатель претензии в течение 30 календарных дней со дня получения претензии, письменно уведомляет заявителя претензии о результатах рассмотрения претензии.</div>
+        <div class="article__p">8.3. При не достижении соглашения спор будет передан на рассмотрение в судебный орган в соответствии с действующим законодательством.</div>
+        <div class="article__p">8.4. К настоящей Политике конфиденциальности и отношениям между Пользователем и Администрацией сайта применяется действующее законодательство.</div>
+        <div class="article__title text_pos_center">ДОПОЛНИТЕЛЬНЫЕ УСЛОВИЯ</div>
+        <div class="article__p">9.1. Администрация сайта вправе вносить изменения в настоящую Политику конфиденциальности без согласия Пользователя.</div>
+        <div class="article__p">9.2. Новая Политика конфиденциальности вступает в силу с момента ее размещения на Сайте, если иное не предусмотрено новой редакцией Политики конфиденциальности.</div>
+      </div>
+    </div>
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__firstLine flex_row__between flex_wrap align_center"><a class="footer__logo sz-logo" href="index.html"><img class="sz-logo__img" src="img/logo-stroyzakaz.png" alt="Логотип STROY-ZAKAZ"><span class="sz-logo__text">STROY&#8209ZAKAZ</span></a><a class="footer__privacyPolicy" href="confidentiality.html">Политика конфиденциальности</a><a class="footer__userAgreement" href="terms.html">Пользовательское соглашение</a>
+          <div class="footer__createdBy createdBy">Разработка сайта <a class="createdBy__link" href="https://rfim.ru/">rfim.ru</a></div>
+        </div>
+        <div class="footer__copyright">2019 STROY-ZAKAZ.RU ©<br>Все права защищены.</div>
+      </div>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="js/concat-js-libs.js"></script>
+    <script src="js/common.js"></script>
+  </body>
+</html>

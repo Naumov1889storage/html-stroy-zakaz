@@ -62,8 +62,7 @@ $(function () {
     }
 
 
-
-    if ($(window).width() > 900) {
+    if ($(window).width() > 900 && !($('productSection.earlyMob').length)) {
         var productMenu = $('.productSection__menu');
         if (productMenu.length) {
             var productMenuOffsetTopInitial = productMenu.offset().top;
@@ -88,15 +87,26 @@ $(function () {
         }
     }
 
+    if ($('.productSection .table').hasClass('table_big')) {
+        $('.productSection').addClass('earlyMob');
 
-
+        $('.dropdown .arrow.mob').click(function (e) {
+            $(this).next().toggleClass('active');
+        });
+        $(document).click(function(e) {
+            var area = $(e.target).parents().addBack();
+            if (!(area.is('.dropdown'))) {
+                $('.dropdown .arrow').next().removeClass('active');
+            }
+        });
+    }
 
     // скрипт отвечающие за карту
     if ($('#map_content').length) {
         ymaps.ready(function (e) {
-            var myCenter = [55.737403, 37.645245];
-            if ($(window).width() < 950) {
-                var myCenter = [55.737003, 37.648245]
+            var myCenter = [64.57949855728545,39.86698050000002];
+            if ($(window).width() < 730) {
+                var myCenter = [64.57989855728545,39.86698050000002]
             }
             var myMap = new ymaps.Map('map_content', {
                     center: myCenter,
@@ -109,9 +119,9 @@ $(function () {
                     '<div style="color: #FFFFFF; font-weight: bold;">$[properties.iconContent]</div>'
                 ),
 
-                myPlacemark = new ymaps.Placemark([55.737403, 37.649245], {
+                myPlacemark = new ymaps.Placemark([64.57949855728545,39.86698050000002], {
                     hintContent: 'STROY-ZAKAZ',
-                    balloonContent: 'Москва, Проектируемый проезд 134'
+                    balloonContent: 'Архангельская область, г. Северодвинск, Архангельское шоссе 29'
                 }, {
                     // Опции.
                     // Необходимо указать данный тип макета.
@@ -122,10 +132,10 @@ $(function () {
                     iconImageSize: [81, 111],
                     // Смещение левого верхнего угла иконки относительно
                     // её "ножки" (точки привязки).
-                    iconImageOffset: [-40, -111]
+                    iconImageOffset: [-40, -118]
                 }),
 
-                myPlacemarkWithContent = new ymaps.Placemark([55.737403, 37.649245], {
+                myPlacemarkWithContent = new ymaps.Placemark([64.57721363065828,39.85982436634828],[64.58178329172841,39.87413663365174], {
                     hintContent: '',
                     balloonContent: '',
                     iconContent: ''

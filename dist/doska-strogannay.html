@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="ru-Ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1.0, width=device-width">
+    <title>STROY-ZAKAZ - Карточка товара</title>
+    <link rel="stylesheet" href="css/concat-css-libs.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700,800&amp;display=swap">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/product.css">
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=c599d252-3a6f-4b64-872c-a529f6263f40&amp;lang=ru_RU" type="text/javascript"></script><link rel="shortcut icon" href="img/favicon-stroyzakaz.ico" type="image/x-icon">
+<link rel="icon" href="img/favicon-stroyzakaz.ico" type="image/x-icon">
+  </head>
+  <body>
+    <!--if page == 'Главная'-->
+    <!--    header.header-->
+    <!--        +header-->
+    <!--    .subHeader-->
+    <!--        +subHeader-->
+    <!--else if page != 'Главная'-->
+    <!--    header.header.notindexpage-->
+    <!--        +header-->
+    <header class="header">
+          <div class="container flex_row__between align_center"><a class="header__logo sz-logo" href="index.html"><img class="sz-logo__img" src="img/logo-stroyzakaz.png" alt="Логотип STROY-ZAKAZ"><span class="sz-logo__text">STROY<span class='sz-logo__hyphen'>&#8209</span>ZAKAZ</span></a>
+            <ul class="sz-contact text_color_black header__contact">
+              <li class="sz-contact__item sz-contact__item_phone"><b>Москва:</b> +7 (499) 350 37 04</li>
+              <li class="sz-contact__item sz-contact__item_phone"><b>Санкт-Петербург:</b> +7 (812) 309 42 95</li>
+              <li class="sz-contact__item sz-contact__item_phone"><b>Краснодар:</b> +7 (861) 203 51 48</li>
+              <li class="sz-contact__item sz-contact__item_email">stroyzakaz01@mail.ru</li>
+            </ul>
+            <!--button(class="header__call btn btn_transparent text_color_grey" type="button") Меня заменят-->
+            <button class="burger"><i></i></button>
+          </div>
+    </header>
+    <div class="subHeader">
+          <div class="container">
+            <button class="burger"><i></i></button>
+            <ul class="nav dropdown flex_row__around align_center flex_wrap">
+              <li class="nav__item"><a class="arrow arrow_down desk" href="index.html#catalogSection">Категории</a><a class="arrow arrow_down mob">Категории</a>
+                <ul>
+                  <li><a class="arrow arrow_right" href="brus-obreznoi.html">Брус обрезной</a>
+                    <ul>
+                      <li><a href="brus-obreznoi.html#brus-obreznoi-gost">Брус обрезной ГОСТ</a></li>
+                      <li><a href="brus-obreznoi.html#brus-obreznoi-ty">Брус обрезной ТУ</a></li>
+                    </ul>
+                  </li>
+                  <li><a class="arrow arrow_right" href="brus-profilirovannyy.html">Брус профилированный</a>
+                    <ul>
+                      <li><a href="brus-profilirovannyy.html#brus-profilirovannyy">Брус профилированный</a></li>
+                      <li><a href="brus-profilirovannyy.html#brus-suhoj-profilirovannyy">Брус сухой профилированный</a></li>
+                    </ul>
+                  </li>
+                  <li><a class="arrow arrow_right" href="brus-stroganyy.html">Брус строганный</a>
+                    <ul>
+                      <li><a href="brus-stroganyy.html#brus-stroganyy">Брус строганный</a></li>
+                      <li><a href="brus-stroganyy.html#brus-suhoj-stroganyy">Брус сухой строганный</a></li>
+                    </ul>
+                  </li>
+                  <li><a class="arrow arrow_right" href="brusok.html">Брусок</a>
+                    <ul>
+                      <li><a href="brusok.html#brusok-obreznoj">Брусок обрезной</a></li>
+                      <li><a href="brusok.html#brusok-strogannyj">Брусок строганный</a></li>
+                    </ul>
+                  </li>
+                  <li><a class="arrow arrow_right" href="doska-obreznaya.html">Доска обрезная</a>
+                    <ul>
+                      <li><a href="doska-obreznaya.html#doska-obreznaya">Доска обрезная</a></li>
+                      <li><a href="doska-obreznaya.html#doska-obreznaya-osina">Доска обрезная осина</a></li>
+                      <li><a href="doska-obreznaya.html#doska-obreznaya-2-j-sort">Доска обрезная 2-й сорт</a></li>
+                    </ul>
+                  </li>
+                  <li><a class="arrow arrow_right" href="doska-polovaya.html">Доска половая</a>
+                    <ul>
+                      <li><a href="doska-polovaya.html#doska-polovaya">Доска половая</a></li>
+                      <li><a href="doska-polovaya.html#doska-suhaya-polovaya">Доска сухая половая</a></li>
+                    </ul>
+                  </li>
+                  <li><a class="arrow arrow_right" href="doska-strogannay.html">Доска строганная</a>
+                    <ul>
+                      <li><a href="doska-strogannay.html#">Доска строганная</a></li>
+                      <li><a href="doska-strogannay.html#">Доска сухая строганная</a></li>
+                    </ul>
+                  </li>
+                  <li><a class="arrow arrow_right" href="vagonka.html">Вагонка</a>
+                    <ul>
+                      <li><a href="vagonka.html#vagonka">Вагонка</a></li>
+                      <li><a href="vagonka.html#vagonka-suhaya">Вагонка сухая</a></li>
+                      <li><a href="vagonka.html#evrovagonka">Евровагонка</a></li>
+                    </ul>
+                  </li>
+                  <li><a class="arrow arrow_right" href="fanera-fk.html">Фанера ФК</a>
+                    <ul>
+                      <li><a href="fanera-fk.html#fanera-fk-sort-3-4">Фанера ФК сорт 3/4</a></li>
+                      <li><a href="fanera-fk.html#fanera-fk-sort-4-4">Фанера ФК сорт 4/4</a></li>
+                      <li><a href="fanera-fk.html#fanera-fk-stroitelnaya">Фанера строительная</a></li>
+                    </ul>
+                  </li>
+                  <li><a class="arrow arrow_right" href="fanera-fsf.html">Фанера ФСФ</a>
+                    <ul>
+                      <li><a href="fanera-fsf.html#fanera-fsf-1220-2440-3-3">1220*2440 3/3</a></li>
+                      <li><a href="fanera-fsf.html#fanera-fsf-1220-2440-3-4">1220х2440 3/4</a></li>
+                      <li><a href="fanera-fsf.html#fanera-fsf-1220-2440-4-4">1220*2440 4/4</a></li>
+                      <li><a href="fanera-fsf.html#fanera-fsf-1500-3000-4-4">1500*3000 4/4</a></li>
+                    </ul>
+                  </li>
+                  <li><a class="arrow arrow_right" href="fanera-laminirovannaya.html">Фанера ламинированная</a>
+                    <ul>
+                      <li><a href="fanera-laminirovannaya.html#fanera-laminirovannaya-1220h2440-kitaj">1220х2440 Китай</a></li>
+                      <li><a href="fanera-laminirovannaya.html#fanera-laminirovannaya-1220h2440-rossiya">1220х2440 Россия</a></li>
+                      <li><a href="fanera-laminirovannaya.html#fanera-laminirovannaya-1500h3000">1500х3000</a></li>
+                    </ul>
+                  </li>
+                  <li><a class="" href="osb-3-plita.html">OSB-3 Плита</a></li>
+                  <li><a class="" href="blok-haus.html">Блок Хаус</a></li>
+                  <li><a class="arrow arrow_right" href="imitaciya-brusa.html">Имитация бруса</a>
+                    <ul>
+                      <li><a href="imitaciya-brusa.html#imitaciya-brusa-klass-a">класс А</a></li>
+                      <li><a href="imitaciya-brusa.html#imitaciya-brusa-klass-ab">класс АВ</a></li>
+                      <li><a href="imitaciya-brusa.html#imitaciya-brusa-klass-b">класс В</a></li>
+                      <li><a href="imitaciya-brusa.html#imitaciya-brusa-klass-c">класс С</a></li>
+                    </ul>
+                  </li>
+                  <li><a class="arrow arrow_right" href="parketnaya-doska.html">Паркетная доска</a>
+                    <ul>
+                      <li><a href="parketnaya-doska.html#parketnaya-doska-iz-massiva-listvennicy">из массива лиственницы</a></li>
+                      <li><a href="parketnaya-doska.html#parketnaya-doska-iz-listvennicy-avangard">из лиственницы "АВАНГАРД"</a></li>
+                    </ul>
+                  </li>
+                  <li><a class="arrow arrow_right" href="terrasnaya-doska.html">Террасная доска</a>
+                    <ul>
+                      <li><a href="terrasnaya-doska.html#terrasnaya-doska-iz-listvennicy-velvet">вельвет</a></li>
+                      <li><a href="terrasnaya-doska.html#terrasnaya-doska-iz-listvennicy-gladkaya">гладкая</a></li>
+                    </ul>
+                  </li>
+                  <li><a class="" href="pellety.html">Пеллеты</a></li>
+                  <li><a class="" href="brikety.html">Брикеты</a></li>
+                  <li><a class="arrow arrow_right" href="uteplitel.html">Утеплитель</a>
+                    <ul>
+                      <li><a href="uteplitel.html#uteplitel-rockwool">Утеплитель ROCKWOOL</a></li>
+                      <li><a href="uteplitel.html#uteplitel-ursa-geo">Утеплитель URSA GEO</a></li>
+                      <li><a href="uteplitel.html#uteplitel-izobel">Утеплитель IZOBEL</a></li>
+                      <li><a href="uteplitel.html#uteplitel-izovol">Утеплитель IZOVOL</a></li>
+                      <li><a href="uteplitel.html#uteplitel-isoroc">Утеплитель ISOROC</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+              <li class="nav__item"><a href="delivery.html">Доставка и оплата</a></li>
+              <li class="nav__item"><a href="index.html#feedbackSection">Отзывы</a></li>
+              <li class="nav__item"><a href="index.html#contactSection">Контакты</a></li>
+            </ul>
+          </div>
+    </div>
+    <div class="topSliderSection">
+      <div class="slider slider_wide text_color_white text_pos_center">
+        <div class="slider__item"><img class="slider__img" src="img/picture-slider-1.jpg">
+          <div class="slider__overlay"></div>
+          <div class="slider__title">Купите 20 тонн пеллет и получите скидку 5%</div>
+          <!--.slider__subtitle Наше дерево экологичекски чистое и правильно выращенное, поэтому наши пиломатериалы лучше чем у конкурентов-->
+        </div>
+        <div class="slider__item"><img class="slider__img" src="img/picture-slider-1.jpg">
+          <div class="slider__overlay"></div>
+          <div class="slider__title">При заказе от 10 кубов бруса или доски получаете скидку 10%</div>
+          <!--.slider__subtitle Наше дерево экологичекски чистое и правильно выращенное, поэтому наши пиломатериалы лучше чем у конкурентов-->
+        </div>
+        <div class="slider__item"><img class="slider__img" src="img/picture-slider-1.jpg">
+          <div class="slider__overlay"></div>
+          <div class="slider__title">Покупайте 500 кв м любой вагонки и получайте 7% скидки</div>
+          <!--.slider__subtitle Наше дерево экологичекски чистое и правильно выращенное, поэтому наши пиломатериалы лучше чем у конкурентов-->
+        </div>
+      </div>
+    </div>
+    <div class="productSection">
+      <div class="container flex_row__end align_start">
+        <ul class="productSection__menu dropdown">
+          <li><span class="mob arrow arrow_down">Категории</span>
+            <ul>
+              <li><a class="arrow arrow_right" href="brus-obreznoi.html">Брус обрезной</a>
+                <ul>
+                  <li><a href="brus-obreznoi.html#brus-obreznoi-gost">Брус обрезной ГОСТ</a></li>
+                  <li><a href="brus-obreznoi.html#brus-obreznoi-ty">Брус обрезной ТУ</a></li>
+                </ul>
+              </li>
+              <li><a class="arrow arrow_right" href="brus-profilirovannyy.html">Брус профилированный</a>
+                <ul>
+                  <li><a href="brus-profilirovannyy.html#brus-profilirovannyy">Брус профилированный</a></li>
+                  <li><a href="brus-profilirovannyy.html#brus-suhoj-profilirovannyy">Брус сухой профилированный</a></li>
+                </ul>
+              </li>
+              <li><a class="arrow arrow_right" href="brus-stroganyy.html">Брус строганный</a>
+                <ul>
+                  <li><a href="brus-stroganyy.html#brus-stroganyy">Брус строганный</a></li>
+                  <li><a href="brus-stroganyy.html#brus-suhoj-stroganyy">Брус сухой строганный</a></li>
+                </ul>
+              </li>
+              <li><a class="arrow arrow_right" href="brusok.html">Брусок</a>
+                <ul>
+                  <li><a href="brusok.html#brusok-obreznoj">Брусок обрезной</a></li>
+                  <li><a href="brusok.html#brusok-strogannyj">Брусок строганный</a></li>
+                </ul>
+              </li>
+              <li><a class="arrow arrow_right" href="doska-obreznaya-osina.html">Доска обрезная</a>
+                <ul>
+                  <li><a href="doska-obreznaya.html#doska-obreznaya">Доска обрезная</a></li>
+                  <li><a href="doska-obreznaya.html#doska-obreznaya-osina">Доска обрезная осина</a></li>
+                  <li><a href="doska-obreznaya.html#doska-obreznaya-2-j-sort">Доска обрезная 2-й сорт</a></li>
+                </ul>
+              </li>
+              <li><a class="arrow arrow_right" href="doska-polovaya.html">Доска половая</a>
+                <ul>
+                  <li><a href="doska-polovaya.html#doska-polovaya">Доска половая</a></li>
+                  <li><a href="doska-polovaya.html#doska-suhaya-polovaya">Доска сухая половая</a></li>
+                </ul>
+              </li>
+              <li><a class="arrow arrow_right" href="doska-strogannay.html">Доска строганная</a>
+                <ul>
+                  <li><a href="doska-strogannay.html#">Доска строганная</a></li>
+                  <li><a href="doska-strogannay.html#">Доска сухая строганная</a></li>
+                </ul>
+              </li>
+              <li><a class="arrow arrow_right" href="vagonka.html">Вагонка</a>
+                <ul>
+                  <li><a href="vagonka.html#vagonka">Вагонка</a></li>
+                  <li><a href="vagonka.html#vagonka-suhaya">Вагонка сухая</a></li>
+                  <li><a href="vagonka.html#evrovagonka">Евровагонка</a></li>
+                </ul>
+              </li>
+              <li><a class="arrow arrow_right" href="fanera-fk.html#">Фанера ФК</a>
+                <ul>
+                  <li><a href="fanera-fk.html#fanera-fk-sort-3-4">Фанера ФК сорт 3/4</a></li>
+                  <li><a href="fanera-fk.html#fanera-fk-sort-4-4">Фанера ФК сорт 4/4</a></li>
+                  <li><a href="fanera-fk.html#fanera-fk-stroitelnaya">Фанера строительная</a></li>
+                </ul>
+              </li>
+              <li><a class="arrow arrow_right" href="fanera-fsf.html">Фанера ФСФ</a>
+                <ul>
+                  <li><a href="fanera-fsf.html#fanera-fsf-1220-2440-3-3">1220*2440 3/3</a></li>
+                  <li><a href="fanera-fsf.html#fanera-fsf-1220-2440-3-4">1220х2440 3/4</a></li>
+                  <li><a href="fanera-fsf.html#fanera-fsf-1220-2440-4-4">1220*2440 4/4</a></li>
+                  <li><a href="fanera-fsf.html#fanera-fsf-1500-3000-4-4">1500*3000 4/4</a></li>
+                </ul>
+              </li>
+              <li><a class="arrow arrow_right" href="fanera-laminirovannaya.html">Фанера ламинированная</a>
+                <ul>
+                  <li><a href="fanera-laminirovannaya.html#fanera-laminirovannaya-1220h2440-kitaj">1220х2440 Китай</a></li>
+                  <li><a href="fanera-laminirovannaya.html#fanera-laminirovannaya-1220h2440-rossiya">1220х2440 Россия</a></li>
+                  <li><a href="fanera-laminirovannaya.html#fanera-laminirovannaya-1500h3000">1500х3000</a></li>
+                </ul>
+              </li>
+              <li><a class="" href="osb-3-plita.html">OSB-3 Плита</a></li>
+              <li><a class="" href="blok-haus.html">Блок Хаус</a></li>
+              <li><a class="arrow arrow_right" href="imitaciya-brusa.html">Имитация бруса</a>
+                <ul>
+                  <li><a href="imitaciya-brusa.html#imitaciya-brusa-klass-a">класс А</a></li>
+                  <li><a href="imitaciya-brusa.html#imitaciya-brusa-klass-ab">класс АВ</a></li>
+                  <li><a href="imitaciya-brusa.html#imitaciya-brusa-klass-b">класс В</a></li>
+                  <li><a href="imitaciya-brusa.html#imitaciya-brusa-klass-c">класс С</a></li>
+                </ul>
+              </li>
+              <li><a class="arrow arrow_right" href="parketnaya-doska.html">Паркетная доска</a>
+                <ul>
+                  <li><a href="parketnaya-doska.html#parketnaya-doska-iz-massiva-listvennicy">из массива лиственницы</a></li>
+                  <li><a href="parketnaya-doska.html#parketnaya-doska-iz-listvennicy-avangard">из лиственницы "АВАНГАРД"</a></li>
+                </ul>
+              </li>
+              <li><a class="arrow arrow_right" href="terrasnaya-doska.html">Террасная доска</a>
+                <ul>
+                  <li><a href="terrasnaya-doska.html#terrasnaya-doska-iz-listvennicy-velvet">вельвет</a></li>
+                  <li><a href="terrasnaya-doska.html#terrasnaya-doska-iz-listvennicy-gladkaya">гладкая</a></li>
+                </ul>
+              </li>
+              <li><a class="" href="pellety.html">Пеллеты</a></li>
+              <li><a class="" href="brikety.html">Брикеты</a></li>
+              <li><a class="arrow arrow_right" href="uteplitel.html">Утеплитель</a>
+                <ul>
+                  <li><a href="uteplitel.html#uteplitel-rockwool">Утеплитель ROCKWOOL</a></li>
+                  <li><a href="uteplitel.html#uteplitel-ursa-geo">Утеплитель URSA GEO</a></li>
+                  <li><a href="uteplitel.html#uteplitel-izobel">Утеплитель IZOBEL</a></li>
+                  <li><a href="uteplitel.html#uteplitel-izovol">Утеплитель IZOVOL</a></li>
+                  <li><a href="uteplitel.html#uteplitel-isoroc">Утеплитель ISOROC</a></li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+        </ul>
+        <div class="productSection__product product">
+          <div class="title title_h2">
+            <div class="title__line"></div>
+            <div class="title__text">Доска строганная</div>
+            <div class="title__line"></div>
+          </div>
+          <div class="spyLinks flex_row__center flex_wrap">
+            <div class="spyLinks__item"><img class="spyLink__img" src="img/Доска строганная маленькие фото/Доска строганная маленькое фото.jpg"><a class="link-spy spyLinks__link" href="#doska-strogannay">Доска строганная</a></div>
+            <div class="spyLinks__item"><img class="spyLink__img" src="img/Доска строганная маленькие фото/Доска строганная сухая маленькое фото.jpg"><a class="link-spy spyLinks__link" href="#doska-suhaya-strogannay">Доска сухая строганная</a></div>
+          </div>
+          <div class="product__gallery gallery flex_row__center flex_wrap"><img class="gallery__item" src="img/Доска строганная большое фото/Доска строганная 1 (большое фото).jpg"><img class="gallery__item" src="img/Доска строганная большое фото/Доска строганная 4 (большое фото).jpg"><img class="gallery__item" src="img/Доска строганная большое фото/Доска половая 2 (большое фото).jpg"><img class="gallery__item" src="img/Доска строганная большое фото/Доска половая 3 (большое фото).jpg"></div>
+          <div class="table" id="doska-strogannay">
+            <div class="table__title">Доска строганная</div>
+            <div class="table__wrap">
+              <table>
+                <tbody>
+                  <tr>
+                    <th>Размер, мм</th>
+                    <th>Качество</th>
+                    <th>Цена за м3</th>
+                  </tr>
+                  <tr>
+                    <td>25х100х6000</td>
+                    <td>ЭКСТРА</td>
+                    <td class="price">10200 руб.</td>
+                  </tr>
+                  <tr>
+                    <td>25х150х6000</td>
+                    <td>ЭКСТРА</td>
+                    <td class="price">10200 руб.</td>
+                  </tr>
+                  <tr>
+                    <td>25х200х6000</td>
+                    <td>ЭКСТРА</td>
+                    <td class="price">10200 руб.</td>
+                  </tr>
+                  <tr>
+                    <td>40х100х6000</td>
+                    <td>ЭКСТРА</td>
+                    <td class="price">9350 руб.</td>
+                  </tr>
+                  <tr>
+                    <td>40х150х6000</td>
+                    <td>ЭКСТРА</td>
+                    <td class="price">9350 руб.</td>
+                  </tr>
+                  <tr>
+                    <td>40х200х6000</td>
+                    <td>ЭКСТРА</td>
+                    <td class="price">9350 руб.</td>
+                  </tr>
+                  <tr>
+                    <td>50х100х6000</td>
+                    <td>ЭКСТРА</td>
+                    <td class="price">9350 руб.</td>
+                  </tr>
+                  <tr>
+                    <td>50х150х6000</td>
+                    <td>ЭКСТРА</td>
+                    <td class="price">9350 руб.</td>
+                  </tr>
+                  <tr>
+                    <td>50х200х6000</td>
+                    <td>ЭКСТРА</td>
+                    <td class="price">9350 руб.</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <div class="table" id="doska-suhaya-strogannay">
+            <div class="table__title">Доска сухая строганная</div>
+            <div class="table__wrap">
+              <table>
+                <tbody>
+                  <tr>
+                    <th>Размер, мм</th>
+                    <th>Качество</th>
+                    <th>Цена за м3</th>
+                  </tr>
+                  <tr>
+                    <td>25х100х6000</td>
+                    <td>ЭКСТРА</td>
+                    <td class="price">11560 руб.</td>
+                  </tr>
+                  <tr>
+                    <td>25х150х6000</td>
+                    <td>ЭКСТРА</td>
+                    <td class="price">11900 руб.</td>
+                  </tr>
+                  <tr>
+                    <td>25х200х6000</td>
+                    <td>ЭКСТРА</td>
+                    <td class="price">11475 руб.</td>
+                  </tr>
+                  <tr>
+                    <td>40х100х6000</td>
+                    <td>ЭКСТРА</td>
+                    <td class="price">10625 руб.</td>
+                  </tr>
+                  <tr>
+                    <td>40х150х6000</td>
+                    <td>ЭКСТРА</td>
+                    <td class="price">10625 руб.</td>
+                  </tr>
+                  <tr>
+                    <td>40х200х6000</td>
+                    <td>ЭКСТРА</td>
+                    <td class="price">10625 руб.</td>
+                  </tr>
+                  <tr>
+                    <td>50х100х6000</td>
+                    <td>ЭКСТРА</td>
+                    <td class="price">10625 руб.</td>
+                  </tr>
+                  <tr>
+                    <td>50х150х6000</td>
+                    <td>ЭКСТРА</td>
+                    <td class="price">10625 руб.</td>
+                  </tr>
+                  <tr>
+                    <td>50х200х6000</td>
+                    <td>ЭКСТРА</td>
+                    <td class="price">10625 руб.</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <h3 class="article__title"></h3>
+          <p class="article__p"></p>
+        </div>
+      </div>
+    </div>
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__firstLine flex_row__between flex_wrap align_center"><a class="footer__logo sz-logo" href="index.html"><img class="sz-logo__img" src="img/logo-stroyzakaz.png" alt="Логотип STROY-ZAKAZ"><span class="sz-logo__text">STROY&#8209ZAKAZ</span></a><a class="footer__privacyPolicy" href="confidentiality.html">Политика конфиденциальности</a><a class="footer__userAgreement" href="terms.html">Пользовательское соглашение</a>
+          <div class="footer__createdBy createdBy">Разработка сайта <a class="createdBy__link" href="https://rfim.ru/">rfim.ru</a></div>
+        </div>
+        <div class="footer__copyright">2019 STROY-ZAKAZ.RU ©<br>Все права защищены.</div>
+      </div>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="js/concat-js-libs.js"></script>
+    <script src="js/common.js"></script>
+  </body>
+</html>

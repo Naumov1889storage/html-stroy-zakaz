@@ -60,6 +60,7 @@ WHITE = #fffff
   }
 }
 
+
 .product {
   .table {
     margin-bottom: 70px
@@ -82,6 +83,7 @@ WHITE = #fffff
     border-spacing: 0
     overflow: auto
 
+
     tr {
       background-color: #f0f0f0
 
@@ -92,6 +94,7 @@ WHITE = #fffff
 
     th {
       height: 73px;
+      padding: 10px
       color: #646464
       font-size: 17px
       font-weight: 500
@@ -100,6 +103,7 @@ WHITE = #fffff
 
     td {
       height: 55px;
+      padding: 10px
       text-align: center
 
       color: #646464
@@ -198,6 +202,69 @@ WHITE = #fffff
     &__product {
       margin: 120px auto 0 auto
       width: 100%
+    }
+  }
+}
+
+
+
+@media (max-width: 1070px) {
+  .productSection.earlyMob {
+    .desk {
+      display: none !important
+    }
+
+    .mob {
+      display: flex !important
+    }
+
+    .dropdown li > ul > li ul {
+      display: none
+    }
+    .dropdown li > ul:not(.active) {
+      display: none
+    }
+    .dropdown li > ul.active {
+      display: block
+    }
+
+    .dropdown ul li a {
+      padding-right: 23px
+    }
+
+    .arrow {
+      padding-right: 23px !important
+
+      &:after {
+        display: none
+      }
+    }
+
+    .productSection {
+      margin-top: 60px
+
+      .container {
+        flex-wrap: wrap
+      }
+
+      &__menu {
+        & > li > ul {
+          display: none
+          flex-direction: column
+        }
+
+        & > li > span {
+          &:after {
+            display: block
+            right: 20px
+          }
+        }
+      }
+
+      &__product {
+        margin: 120px auto 0 auto
+        width: 100%
+      }
     }
   }
 }

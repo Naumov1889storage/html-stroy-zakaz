@@ -424,7 +424,7 @@ ul.dropdown:after {
 
   &__contact {
     margin: 10px 0 10px 10px
-    min-width: 520px
+    min-width: 690px
     width: 60%
 
     .sz-contact__item {
@@ -743,7 +743,7 @@ ul.dropdown:after {
 
 .footer {
   position: relative;
-  padding: 30px 0 120px 0
+  padding: 30px 0 105px 0
   border-top: 1px solid PRIMARY
 
   &, .container {
@@ -839,6 +839,7 @@ ul.dropdown:after {
 
     &__contact {
       width: 65%
+      min-width: 607px;
     }
     .sz-contact {
       &__item {
@@ -902,7 +903,6 @@ ul.dropdown:after {
 
     &__contact {
       margin-left: 10%
-      width: 70%
     }
     .sz-contact {
       &__item {
@@ -953,6 +953,20 @@ ul.dropdown:after {
       display: inline
       margin: 8px 0 0 0
       width: auto
+    }
+  }
+}
+
+@media (max-width: 850px) {
+  .header {
+    &__contact {
+      min-width: auto;
+      width: 600px;
+      .sz-contact__item {
+        b {
+          display: none
+        }
+      }
     }
   }
 }
@@ -1158,9 +1172,6 @@ ul.dropdown:after {
     &__contact {
       width: 200px
       .sz-contact__item {
-        b {
-          display: none
-        }
         font-size: 15px
       }
     }
@@ -1227,5 +1238,32 @@ ul.dropdown:after {
     margin-top: 80px
     margin-bottom: 60px
   }
+  .article__title {
+    margin-top: 50px
+    margin-bottom: 20px
+  }
 }
+.confidentialitySection {
+  margin-bottom: 90px
+  &__title {
+    margin-top: 80px
+    margin-bottom: 60px
+  }
+  .article__title {
+    margin-top: 50px
+    margin-bottom: 20px
+  }
+}
+.termsSection {
+  margin-bottom: 90px
+  &__title {
+    margin-top: 80px
+    margin-bottom: 60px
+  }
+  .article__title {
+    margin-top: 50px
+    margin-bottom: 20px
+  }
+}
+
 

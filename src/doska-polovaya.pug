@@ -1,0 +1,81 @@
+extends pug-components/product
+
+block product
+    .title.title_h2
+        .title__line
+        .title__text Доска половая
+        .title__line
+    .spyLinks.flex_row__center.flex_wrap
+        .spyLinks__item
+            img(class="spyLink__img" src="img/Доска половая маленькие фото/Доска половая маленькое фото.jpg")
+            a(class="link-spy spyLinks__link" href="#doska-polovaya") Доска половая
+        .spyLinks__item
+            img(class="spyLink__img" src="img/Доска половая маленькие фото/Доска половая сухая маленькое фото.jpg")
+            a(class="link-spy spyLinks__link" href="#doska-suhaya-polovaya") Доска сухая половая
+
+    .product__gallery.gallery.flex_row__center.flex_wrap
+        img(class="gallery__item" src="img/Доска половая большое фото/Доска половая 1 (большое фото).jpg")
+        img(class="gallery__item" src="img/Доска половая большое фото/Доска половая 2 (большое фото).jpg")
+        img(class="gallery__item" src="img/Доска половая большое фото/Доска половая 3 (большое фото).jpg")
+        img(class="gallery__item" src="img/Доска половая большое фото/Доска половая 4 (большое фото).jpg")
+
+    .table#doska-polovaya
+        .table__title Доска половая
+        .table__wrap
+            table
+                tbody
+                    tr
+                        th Размер, мм
+                        th Качество
+                        th Цена за м2
+                    tr
+                        td 35х90х6000
+                        td ЭКСТРА
+                        td.price 425 руб.
+                    tr
+                        td 35х120х6000
+                        td ЭКСТРА
+                        td.price 408 руб.
+                    tr
+                        td 35х140х6000
+                        td ЭКСТРА
+                        td.price 425 руб.
+                    tr
+                        td 45х140х6000
+                        td ЭКСТРА
+                        td.price 535 руб.
+
+    .table#doska-suhaya-polovaya
+        .table__title Доска сухая половая
+        .table__wrap
+            table
+                tbody
+                    tr
+                        th Размер, мм
+                        th Качество
+                        th Цена за м2
+                    tr
+                        td 28х140х6000
+                        td ЭКСТРА
+                        td.price 433 руб.
+                    tr
+                        td 35х90х6000
+                        td ЭКСТРА
+                        td.price 510 руб.
+                    tr
+                        td 35х120х6000
+                        td ЭКСТРА
+                        td.price 510 руб.
+                    tr
+                        td 35х140х6000
+                        td ЭКСТРА
+                        td.price 510 руб.
+                    tr
+                        td 45х140х6000
+                        td ЭКСТРА
+                        td.price 637 руб.
+
+
+
+    h3.article__title
+    p.article__p

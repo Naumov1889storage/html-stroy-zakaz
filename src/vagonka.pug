@@ -1,0 +1,107 @@
+extends pug-components/product
+
+block product
+    .title.title_h2
+        .title__line
+        .title__text Вагонка
+        .title__line
+    .spyLinks.flex_row__center.flex_wrap
+        .spyLinks__item
+            img(class="spyLink__img" src="img/Вагонка маленькие фото/Вагонка (маленькое фото).jpg")
+            a(class="link-spy spyLinks__link" href="#vagonka") Вагонка
+        .spyLinks__item
+            img(class="spyLink__img" src="img/Вагонка маленькие фото/Вагонка сухая (маленькое фото).jpg")
+            a(class="link-spy spyLinks__link" href="#vagonka-suhaya") Вагонка сухая
+        .spyLinks__item
+            img(class="spyLink__img" src="img/Вагонка маленькие фото/Евровагонка (маленькое фото).jpg")
+            a(class="link-spy spyLinks__link" href="#evrovagonka") Евровагонка
+
+    .product__gallery.gallery.flex_row__center.flex_wrap
+        img(class="gallery__item" src="img/Вагонка большие фото/Вагонка 1 (большое фото).jpg")
+        img(class="gallery__item" src="img/Вагонка большие фото/Вагонка 2 (большое фото).jpg")
+        img(class="gallery__item" src="img/Вагонка большие фото/Вагонка 3 (большое фото).jpg")
+        img(class="gallery__item" src="img/Вагонка большие фото/Вагонка 4 (большое фото).jpg")
+
+    .table#vagonka
+        .table__title Вагонка
+        .table__wrap
+            table
+                tbody
+                    tr
+                        th Размер, мм
+                        th Качество
+                        th Штук в м3
+                        th Цена за м3
+                    tr
+                        td 20х100х6000
+                        td ЭКСТРА
+                        td 83
+                        td.price 10625 руб.
+                    tr
+                        td 20х130х6000
+                        td ЭКСТРА
+                        td 64
+                        td.price 10625 руб.
+                    tr
+                        td 20х150х6000
+                        td ЭКСТРА
+                        td 55
+                        td.price 10625 руб.
+
+
+    .table#vagonka-suhaya
+        .table__title Вагонка сухая
+        .table__wrap
+            table
+                tbody
+                    tr
+                        th Размер, мм
+                        th Качество
+                        th Штук в м3
+                        th Цена за м3
+                    tr
+                        td 20х100х6000
+                        td ЭКСТРА
+                        td 83
+                        td.price 11475 руб.
+                    tr
+                        td 20х130х6000
+                        td ЭКСТРА
+                        td 64
+                        td.price 11475 руб.
+                    tr
+                        td 20х150х6000
+                        td ЭКСТРА
+                        td 55
+                        td.price 11475 руб.
+
+    .table#evrovagonka
+        .table__title Евровагонка
+        .table__wrap
+            table
+                tbody
+                    tr
+                        th Модель
+                        th Качество
+                        th Цена за м2
+                    tr
+                        td Штиль
+                        td ЭКСТРА
+                        td.price 297 руб.
+                    tr
+                        td Класс «А»
+                        td ЭКСТРА
+                        td.price 229 руб.
+                    tr
+                        td Класс «В»
+                        td ЭКСТРА
+                        td.price 187 руб.
+                    tr
+                        td Класс «С»
+                        td ЭКСТРА
+                        td.price 161 руб.
+
+
+
+    h3.article__title
+    p.article__p

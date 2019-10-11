@@ -307,7 +307,7 @@ ul.dropdown:after {
 }
 .header__contact {
   margin: 10px 0 10px 10px;
-  min-width: 520px;
+  min-width: 690px;
   width: 60%;
 }
 .header__contact .sz-contact__item {
@@ -548,7 +548,7 @@ ul.dropdown:after {
 }
 .footer {
   position: relative;
-  padding: 30px 0 120px 0;
+  padding: 30px 0 105px 0;
   border-top: 1px solid #fcbb2d;
 }
 .footer__logo {
@@ -620,6 +620,7 @@ ul.dropdown:after {
   }
   .header__contact {
     width: 65%;
+    min-width: 607px;
   }
   .header .sz-contact__item {
     font-size: 16px;
@@ -662,7 +663,6 @@ ul.dropdown:after {
   }
   .header__contact {
     margin-left: 10%;
-    width: 70%;
   }
   .header .sz-contact__item {
     font-size: 16px;
@@ -688,6 +688,15 @@ ul.dropdown:after {
     display: inline;
     margin: 8px 0 0 0;
     width: auto;
+  }
+}
+@media (max-width: 850px) {
+  .header__contact {
+    min-width: auto;
+    width: 600px;
+  }
+  .header__contact .sz-contact__item b {
+    display: none;
   }
 }
 @media (max-width: 730px) {
@@ -825,9 +834,6 @@ ul.dropdown:after {
   .header__contact .sz-contact__item {
     font-size: 15px;
   }
-  .header__contact .sz-contact__item b {
-    display: none;
-  }
   .topSliderSection {
     height: 300px;
   }
@@ -869,4 +875,30 @@ ul.dropdown:after {
 .deliverySection__title {
   margin-top: 80px;
   margin-bottom: 60px;
+}
+.deliverySection .article__title {
+  margin-top: 50px;
+  margin-bottom: 20px;
+}
+.confidentialitySection {
+  margin-bottom: 90px;
+}
+.confidentialitySection__title {
+  margin-top: 80px;
+  margin-bottom: 60px;
+}
+.confidentialitySection .article__title {
+  margin-top: 50px;
+  margin-bottom: 20px;
+}
+.termsSection {
+  margin-bottom: 90px;
+}
+.termsSection__title {
+  margin-top: 80px;
+  margin-bottom: 60px;
+}
+.termsSection .article__title {
+  margin-top: 50px;
+  margin-bottom: 20px;
 }
