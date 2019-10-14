@@ -451,10 +451,14 @@ ul.dropdown:after {
 
   &__contact {
     margin: 10px 0 10px 10px
-    width: 685px
+    width: 745px
     .sz-contact__item {
       width: max-content
       padding: 8px 3% 8px 32px;
+      &:nth-child(1),
+      &:nth-child(3) {
+        width: 325px
+      }
     }
   }
 
@@ -1180,10 +1184,41 @@ ul.dropdown:after {
 }
 
 @media (max-width: 600px) {
-  
+
+
+
   .header {
-    &__working-hours {
-      display: none
+    .container {
+      position: relative;
+      flex-direction: column
+      padding-top: 10px
+      padding-bottom: 10px
+      padding-left: 15%
+    }
+    &__logo {
+      position: absolute
+      top: 50%
+      transform: translateY(-50%)
+      left: 30px
+    }
+    .burger {
+      position: absolute;
+      right: 30px
+      top: 50%
+      transform: translateY(-50%)
+    }
+    &__contact {
+      margin: 0 0 10px 0
+      .sz-contact__item {
+        padding: 3px
+        &:nth-child(1),
+        &:nth-child(3) {
+          width: max-content
+        }
+        &:before {
+          display: none
+        }
+      }
     }
   }
   .subHeader {
@@ -1227,6 +1262,12 @@ ul.dropdown:after {
 
 @media (max-width: 500px) {
   .header {
+    &__working-hours {
+      margin-left: 20px;
+      .working-hours__item {
+        font-size: 15px
+      }
+    }
     &__logo {
       .sz-logo {
         &__text {
@@ -1282,8 +1323,22 @@ ul.dropdown:after {
   }
 }
 
+@media (max-width: 400px) {
+  .header {
+    &__logo {
+      left: 15px
+    }
+    .burger {
+      right: 15px
+    }
+  }
+}
+
 @media (max-width: 360px) {
   .header {
+    .container {
+      padding-left: 25%;
+    }
     &__logo {
       .sz-logo {
         &__text {
@@ -1296,6 +1351,11 @@ ul.dropdown:after {
       width: 200px
 
       .sz-contact__item {
+        font-size: 13px
+      }
+    }
+    &__working-hours {
+      .working-hours__item {
         font-size: 13px
       }
     }
