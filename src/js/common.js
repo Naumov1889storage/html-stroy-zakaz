@@ -113,7 +113,7 @@ $(function () {
         ymaps.ready(function (e) {
             var myCenter = [64.57949855728545,39.86698050000002];
             if ($(window).width() < 730) {
-                var myCenter = [64.57989855728545,39.86698050000002]
+                var myCenter = [64.57989955728545,39.86698050000002]
             }
             var myMap = new ymaps.Map('map_content', {
                     center: myCenter,

@@ -247,10 +247,12 @@ ul.dropdown:after {
 .dropdown ul:after, ul.dropdown:after {
   clear: both;
 }
+
 .dropdown ul.active {
   display: block;
   position: absolute;
   z-index: 2
+
   li {
     float: none
   }
@@ -413,6 +415,19 @@ ul.dropdown:after {
   }
 }
 
+.working-hours {
+  &__item {
+    font-size: 18px
+    font-weight: 500
+    color: BLACK
+
+    &_b {
+      font-weight: 600
+      color: #191919;
+    }
+  }
+}
+
 
 .header {
   min-height: 105px;
@@ -422,11 +437,21 @@ ul.dropdown:after {
     min-height: 105px;
   }
 
+  &__working-hours {
+    display: flex
+    flex-direction: column
+    width: 215px
+    .working-hours__item {
+      margin-bottom: 2px
+      &_b {
+        margin-bottom: 5px
+      }
+    }
+  }
+
   &__contact {
     margin: 10px 0 10px 10px
-    min-width: 690px
-    width: 60%
-
+    width: 685px
     .sz-contact__item {
       width: max-content
       padding: 8px 3% 8px 32px;
@@ -435,7 +460,20 @@ ul.dropdown:after {
 
   &__logo {
     margin: 10px 20px 10px 0
+    flex-direction: column
+    align-items: center
 
+    .sz-logo {
+      &__text {
+        padding: 10px 0 0 0
+        font-size: 18px
+      }
+
+      &__hyphen {
+        display: block
+        font-size: 0
+      }
+    }
   }
 
   &__call {
@@ -450,7 +488,7 @@ ul.dropdown:after {
 
   min-height: 69px
   border-bottom: 1px solid PRIMARY
-  
+
   .burger {
     display: none
   }
@@ -467,6 +505,10 @@ ul.dropdown:after {
       font-size: 18px
       font-weight: 600
       letter-spacing: 0.45px
+    }
+    
+    &__working-hours {
+      display: none
     }
 
     & > li {
@@ -719,6 +761,21 @@ ul.dropdown:after {
     margin-bottom: 20px
   }
 
+  &__working-hours {
+    display: flex
+    justify-content: center
+    align-items: center
+    flex-wrap: wrap
+    text-align: center
+    padding: 20px 0 20px 0
+    .working-hours__item {
+      margin: 0 5px
+      &_b {
+        margin-right: 8px
+      }
+    }
+  }
+
   .contact__wrap {
     min-height: 263px
     padding: 0 25px 25px 25px
@@ -830,19 +887,23 @@ ul.dropdown:after {
         &__img {
           width: 60px
         }
-        &__text {
-          padding-left: 20px
-          font-size: 20px
-        }
       }
     }
 
     &__contact {
-      width: 65%
-      min-width: 607px;
+      display: flex
+      flex-direction: column
+      width: 335px
     }
+
     .sz-contact {
       &__item {
+        font-size: 16px
+      }
+    }
+
+    &__working-hours {
+      .working-hours__item {
         font-size: 16px
       }
     }
@@ -852,6 +913,7 @@ ul.dropdown:after {
 .mob {
   display: none !important
 }
+
 .burger {
   display: none
 }
@@ -874,6 +936,7 @@ ul.dropdown:after {
   .dropdown li > ul > li ul {
     display: none !important
   }
+
   .dropdown li > ul:not(.active) {
     display: none
   }
@@ -891,25 +954,6 @@ ul.dropdown:after {
   }
 
   .header {
-
-    &__logo {
-      .sz-logo {
-        &__hyphen {
-          display: block
-          font-size: 0
-        }
-      }
-    }
-
-    &__contact {
-      margin-left: 10%
-    }
-    .sz-contact {
-      &__item {
-        //width: 100%
-        font-size: 16px
-      }
-    }
   }
 
   .subHeader {
@@ -919,6 +963,7 @@ ul.dropdown:after {
     //height: 100%
     //background: #ffffff
     //overflow: auto
+
     .nav {
       &__item {
         .arrow.arrow_down {
@@ -960,8 +1005,7 @@ ul.dropdown:after {
 @media (max-width: 850px) {
   .header {
     &__contact {
-      min-width: auto;
-      width: 600px;
+      width: 215px
       .sz-contact__item {
         b {
           display: none
@@ -984,6 +1028,7 @@ ul.dropdown:after {
     i::after {
       background: MILDBLACK
     }
+
     //&_active {
     //  z-index: 11
     //}
@@ -991,27 +1036,15 @@ ul.dropdown:after {
 
   .header {
     padding: 5px 0 5px 0;
-    &__logo {
-      //flex-direction: column
-      //.sz-logo {
-      //  &__text {
-      //    padding: 10px 0 0 0
-      //    font-size: 18px
-      //  }
-      //}
-    }
+
     &__contact {
       margin: 10px 2% 10px 2%
-      min-width: auto
-      width: 280px;
-      .sz-contact__item {
-        width: 100%
-      }
     }
   }
 
   .topSliderSection {
     height: 400px
+
     .slider {
       .slider__item {
         padding: 0 15px 0 15px;
@@ -1029,6 +1062,7 @@ ul.dropdown:after {
 
   .subHeader {
     display: none;
+
     &.mob_show {
       display: block;
       position: fixed;
@@ -1041,15 +1075,18 @@ ul.dropdown:after {
       background: #ffffff
       overflow: auto
       border-bottom: none
+
       .dropdown li:hover > ul {
         position: relative;
       }
+
       .nav {
         flex-direction: column
         //justify-content: center
         text-align: center
         padding-bottom: 50px
       }
+
       .burger {
         display: block
         position: absolute
@@ -1057,27 +1094,32 @@ ul.dropdown:after {
         right: 15px
         top: 70px
       }
+
       .container {
         padding: 50px 25px 0 25px
 
       }
     }
+
     .nav {
       &__item {
         justify-content: center
       }
+
       & > li {
         justify-content: center
         width: 100%
 
         & > a {
           justify-content: center
+
           &.arrow {
             &:after {
               right: 0 !important
-              left: calc(50%+80px)
+              left: calc(50% + 80px)
             }
           }
+
           &.arrow.arrow_down {
             &:after {
               right: 15px
@@ -1104,6 +1146,7 @@ ul.dropdown:after {
         padding: 0 32px 0 32px
 
       }
+
       &__text {
         text-align: left
         align-self: flex-start
@@ -1137,13 +1180,23 @@ ul.dropdown:after {
 }
 
 @media (max-width: 600px) {
+  
   .header {
-    &__logo {
+    &__working-hours {
+      display: none
+    }
+  }
+  .subHeader {
+    .nav__working-hours {
+      display: flex
       flex-direction: column
-      .sz-logo {
-        &__text {
-          padding: 10px 0 0 0
-          font-size: 18px
+      margin-top: 30px
+      .working-hours__item {
+        font-weight: 500
+        margin-bottom: 2px
+        &_b {
+          margin-bottom: 5px
+          font-weight: 600
         }
       }
     }
@@ -1155,6 +1208,18 @@ ul.dropdown:after {
 
       &__item {
         width: 100%
+      }
+    }
+
+    &__working-hours {
+      justify-content: flex-start
+      align-items: flex-start
+      flex-direction: column
+      .working-hours__item {
+        margin-bottom: 2px
+        &_b {
+          margin-bottom: 5px
+        }
       }
     }
   }
@@ -1169,8 +1234,10 @@ ul.dropdown:after {
         }
       }
     }
+
     &__contact {
       width: 200px
+
       .sz-contact__item {
         font-size: 15px
       }
@@ -1179,6 +1246,7 @@ ul.dropdown:after {
 
   .topSliderSection {
     height: 300px
+
     .slider {
       .slider__item {
         padding: 0 15px 0 15px;
@@ -1191,6 +1259,7 @@ ul.dropdown:after {
       &__subtitle {
         font-size: 15px
       }
+
       .slick-dots {
         bottom: 20px
       }
@@ -1205,6 +1274,7 @@ ul.dropdown:after {
         padding: 0 25px 0 25px
 
       }
+
       &__text {
         font-size: 16px
       }
@@ -1224,6 +1294,7 @@ ul.dropdown:after {
 
     &__contact {
       width: 200px
+
       .sz-contact__item {
         font-size: 13px
       }
@@ -1234,32 +1305,40 @@ ul.dropdown:after {
 
 .deliverySection {
   margin-bottom: 90px
+
   &__title {
     margin-top: 80px
     margin-bottom: 60px
   }
+
   .article__title {
     margin-top: 50px
     margin-bottom: 20px
   }
 }
+
 .confidentialitySection {
   margin-bottom: 90px
+
   &__title {
     margin-top: 80px
     margin-bottom: 60px
   }
+
   .article__title {
     margin-top: 50px
     margin-bottom: 20px
   }
 }
+
 .termsSection {
   margin-bottom: 90px
+
   &__title {
     margin-top: 80px
     margin-bottom: 60px
   }
+
   .article__title {
     margin-top: 50px
     margin-bottom: 20px
